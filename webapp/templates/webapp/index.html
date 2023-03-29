@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Home 2 | Gautama</title>
+    <title>Home 3 | Gautama</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'webapp/images/pdnof.png' %}">
     <!-- Bootstrap core CSS -->
@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="links links-left">
                     <ul>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@gautama.com</a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@Gautama.com.np</a></li>
                         <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 977-222-333-444</a></li>
                         <li>
                             <select>
@@ -71,7 +71,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html">
-                            <img alt="logo1" src="images/logo-black.png" class="logo-black">
+                            <img alt="Image" src="{% static 'webapp/images/pdlogo1.png' %}" class="logo-black">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -94,7 +94,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="roomlist-2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooms<i class="fa fa-angle-down" aria-hidden="true"></i></a> 
+                                <a href="roomlist-2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooms<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="roomlist-2.html">Room List</a></li>
                                     <li><a href="roomlist-1.html">Room Grid</a></li>
@@ -120,7 +120,7 @@
                                         <a href="aboutus.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="aboutus.html">About One</a></li>
-                                            <li><a href="aboutus.html">About Two</a></li>
+                                            <li><a href="aboutus1.html">About Two</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu dropdown">
@@ -129,7 +129,7 @@
                                             <li><a href="gallery.html">Gallery 1</a></li>
                                             <li><a href="gallery1.html">Gallery 2</a></li>
                                             <li><a href="gallery2.html">Gallery Masonry</a></li>
-                                            <li><a href="gallery.html">Gallery Lightbox</a></li>
+                                            <li><a href="gallery3.html">Gallery Lightbox</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu dropdown">
@@ -168,7 +168,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="restaurant.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurant<i class="fa fa-angle-down" aria-hidden="true"></i></a> 
+                                <a href="restaurant.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurant<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="restaurant.html">Home</a></li>
                                     <li><a href="restaurant-about.html">About Us</a></li>
@@ -225,6 +225,7 @@
                             <li class="dropdown submenu">
                                 <a href="cart.html" class="mt_cart"><i class="fa fa-shopping-cart"></i><span class="number-cart">1</span></a>
                             </li>
+
                         </ul>
                         <div class="nav-btn">
                             <a href="#" class="btn btn-orange">Book Now</a>
@@ -237,26 +238,26 @@
         <!-- Navigation Bar Ends -->
     </header>
     <!-- header Ends -->
-    
+
     <!-- banner starts -->
     <section class="banner banner-style-1">
         <div class="slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(images/slider/slider3.jpg)">
+                    <div class="swiper-slide" style="background-image:url({%  static 'webapp/images/pd3.jpg' %})">
                         <div class="swiper-content">
                             <h1 data-animation="animated fadeInUp">Explore & Enjoy With<span> Hotel Gautama</span></h1>
                             <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10"> Explore Our Rooms</a>
                             <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-wt"> Book A Room Now</a>
                         </div>
                     </div>
-                    <div class="swiper-slide" style="background-image:url(images/slider/slider2.jpg)">
+                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/pd4.jpg' %})">
                         <div class="swiper-content">
-                            <h1 data-animation="animated fadeInUp"><span>Spend Holidays</span> With Hotel Gautama</h1>
+                            <h1 data-animation="animated fadeInUp"><span>Spend Holidays</span> With HOtel Gautama</h1>
                             <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or"> Explore Our Rooms</a>
                         </div>
                     </div>
-                    <div class="swiper-slide" style="background-image:url(images/slider/slider1.jpg)">
+                    <div class="swiper-slide" style="background-image:url({%  static 'webapp/images/slider/slider1.jpg' %})">
                         <div class="swiper-content">
                             <h1 data-animation="animated fadeInUp">Enjoy The World of <span>Relaxation</span></h1>
                             <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or"> Explore Our Rooms</a>
@@ -268,7 +269,7 @@
             </div>
             <div class="overlay"></div>
         </div>
-            
+
         <div class="banner-form form-style-2">
             <div class="form-content">
                 <div class="form-title"><h4 class="mar-0">Reserve Your Room</h4></div>
@@ -330,240 +331,55 @@
     </section>
     <!-- banner Ends -->
 
-   <!-- About Us Start -->
-    <section class="about-us about-us1">
+    <!-- about us starts -->
+    <section class="about-style-1">
         <div class="container">
-            <div class="why-us-box mar-bottom-80">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="why-us-item text-center">
-                            <div class="why-us-icon">
-                                <i class="fa fa-tags"></i>
-                            </div>
-                            <div class="why-us-content">
-                                <h4>Competetive Pricing</h4>
-                                <p>With 500+ suppliers and the purchasing power of 300 million members</p>
-                            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="about-heading">
+                        <h2 class="title">Comfort are perfectly combined here</h2>
+                        <div class="description">
+                            <p>This charming private 19th century mansion, which originally belonged to the family, has been completely renovated with care &amp; passion while respecting the spirit of place.</p>
+                            <p>Gautama Hotel surrounded herself by a team of French artisans to create a sophisticated place in a refined.</p>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="why-us-item text-center">
-                            <div class="why-us-icon">
-                                <i class="fa fa-award"></i>
-                            </div>
-                            <div class="why-us-content">
-                                <h4>Award Winning Service</h4>
-                                <p>Travel worry free knowing that we're here if you need us, 24 hours a day</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="why-us-item text-center">
-                            <div class="why-us-icon">
-                                <i class="fa fa-globe"></i>
-                            </div>
-                            <div class="why-us-content">
-                                <h4>Worldwide Coverage</h4>
-                                <p>Over 1,200,000 hotels in more than 200 countries and regions.</p>
-                            </div>
+                        <div class="head-button">
+                            <a href="about-us.html" class="btn btn-orange">More Info</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-outer">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="about-content">
-                            <h2 class="mar-bottom-30">Redefines the <span>luxury hospitality</span> experience.</h2>
-                            <p>This charming private 19th century mansion, which originally belonged to the family, has been completely renovated with care & passion while respecting the spirit of place.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius iaculis gravida. Nunc vel maximus libero. Quisque ligula nisi, hendrerit et scelerisque et, scelerisque vitae magna. Integer sollicitudin, ex auctor iaculis tempor, mauris odio accumsan odio.</p>
-                            <a class="btn btn-orange mar-top-25">KNOW MORE ABOUT US <i class="fas fa-angle-double-right"></i></a>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="about-img-box row">
+                        <div class="col-sm-6  col-sm-6 col-xs-6">
+                            <a href="#"><img src="{% static 'webapp/images/aboutus1.jpg' %}" alt=""></a>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="about-image">
-                            <div class="image-box">
-                                <div class="image-1 abt-image">
-                                    <img src="images/about1.jpg" alt="image">
-                                </div>
-                                <div class="image-2 abt-image">
-                                    <img src="images/about2.jpg" alt="image">
-                                </div>
-                            </div>
+                        <div class="col-sm-6 col-sm-6 col-xs-6">
+                            <a href="#"><img src="{% static 'webapp/images/aboutus2.jpg' %}" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- About Us Ends -->
-
-    <!-- Rooms starts -->
-    <section class="rooms">
-        <div class="container">
-            <div class="row display-flex">
-                <div class="col-md-4">
-                    <div class="section-title">
-                        <h5>DISCOVER OUR ROOMS</h5>
-                        <h2>Explore <span>Rooms & Suits</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis<br><br>
-                        To start the day in the best way, enjoying the extraordinary buffet breakfast in the quiet of our courtyard caressed by the</p>
-                        <a href="#" class="btn btn-black mar-top-30">Explore More Rooms</a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="room-outer">
-                        <div class="row room-slider">
-                            <div class="col-md-4 col-sm-6 col-xs-6">
-                                <div class="room-item">
-                                    <div class="room-image">
-                                        <img src="images/room-b1.jpg" alt="image">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </div>
-                                    <div class="room-content">
-                                        <div class="room-title">
-                                            <h4>Super Deluxe</h4>
-                                            <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                            <div class="deal-rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                        </div>
-                                        <div class="room-services mar-bottom-15">
-                                            <ul>
-                                                <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                            </ul>
-                                        </div>
-                                        <div class="room-btns mar-top-20">
-                                            <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                            <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6">
-                                <div class="room-item">
-                                    <div class="room-image">
-                                        <img src="images/room-b2.jpg" alt="image">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </div>
-                                    <div class="room-content">
-                                        <div class="room-title">
-                                            <h4>Junior Suite</h4>
-                                            <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                            <div class="deal-rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                        </div>
-                                        <div class="room-services mar-bottom-15">
-                                            <ul>
-                                                <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                            </ul>
-                                        </div>
-                                        <div class="room-btns mar-top-20">
-                                            <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                            <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <div class="room-item">
-                                    <div class="room-image">
-                                        <img src="images/room-b3.jpg" alt="image">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </div>
-                                    <div class="room-content">
-                                        <div class="room-title">
-                                            <h4>Executive Suite</h4>
-                                            <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                            <div class="deal-rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                        </div>
-                                        <div class="room-services mar-bottom-15">
-                                            <ul>
-                                                <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                            </ul>
-                                        </div>
-                                        <div class="room-btns mar-top-20">
-                                            <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                            <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="col-md-4 col-sm-6 col-xs-6">
-                                <div class="room-item">
-                                    <div class="room-image">
-                                        <img src="images/room-b4.jpg" alt="image">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </div>
-                                    <div class="room-content">
-                                        <div class="room-title">
-                                            <h4>Royal Deluxe</h4>
-                                            <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                            <div class="deal-rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                        </div>
-                                        <div class="room-services mar-bottom-15">
-                                            <ul>
-                                                <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                            </ul>
-                                        </div>
-                                        <div class="room-btns mar-top-20">
-                                            <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                            <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Room Ends -->
+    <!-- about us Ends -->
 
     <!-- top hotel starts -->
     <section class="top-hotel">
         <div class="container">
             <div class="top-title">
                 <div class="row display-flex">
-                <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="col-md-8">
                     <h2>top <span>Hotels</span></h2>
                     <p class="mar-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4">
                     <a href="#" class="btn btn-black pull-right">Explore More</a>
                 </div>
                 </div>
-            </div>    
+            </div>
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="top-hotels-ii">
-                        <img src="images/dt-1.jpg" alt="hotel-image">
+                        <img src="{% static 'webapp/images/dt-1.jpg' %}" alt="hotel-image">
                         <h4>Maldives</h4>
                         <div class="pp-details yellow">
                             <span class="pull-left">40 Hotels</span>
@@ -575,7 +391,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="top-hotels-ii">
-                        <img src="images/dt-2.jpg" alt="hotel-image">
+                        <img src="{% static 'webapp/images/dt-2.jpg' %}" alt="hotel-image">
                         <h4>Africa</h4>
                         <div class="pp-details yellow">
                             <span class="pull-left">40 Hotels</span>
@@ -587,7 +403,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="top-hotels-ii">
-                        <img src="images/dt-3.jpg" alt="hotel-image">
+                        <img src="{% static 'webapp/images/dt-3.jpg' %}" alt="hotel-image">
                         <h4>Egypt</h4>
                         <div class="pp-details yellow">
                             <span class="pull-left">40 Hotels</span>
@@ -599,7 +415,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="top-hotels-ii">
-                        <img src="images/dt-4.jpg" alt="hotel-image">
+                        <img src="{% static 'webapp/images/dt-4.jpg' %}" alt="hotel-image">
                         <h4>Africa</h4>
                         <div class="pp-details yellow">
                             <span class="pull-left">40 Hotels</span>
@@ -614,208 +430,395 @@
     </section>
     <!-- top hotel ends -->
 
+    <!-- Rooms starts -->
+    <section class="rooms rooms-style1">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore <span>Rooms</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+            </div>
+            <div class="room-outer">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b1.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Super Deluxe</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b2.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Junior Suite</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b3.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Executive Suite</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b4.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Royal Deluxe</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b5.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Standard Room</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="room-item">
+                            <div class="room-image">
+                                <img src="{% static 'webapp/images/room-b6.jpg' %}" alt="image">
+                            </div>
+                            <div class="room-content">
+                                <div class="room-title">
+                                    <h4>Special Suite</h4>
+                                    <p class="price-ft">$2010 <span>/ per Night</span></p>
+                                    <div class="deal-rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                                <div class="room-btns mar-top-20">
+                                    <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
+                                    <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Room Ends -->
+
     <!-- Call To Action Starts -->
-    <section class="call-to-action">
+    <section class="call-to-action call-style-1">
         <div class="container">
             <div class="call-content text-center">
-                <h2 class="white mar-bottom-25">Voted <span>"Top 100 Hotels in the World 2019"</span> by Hotel Association</h2>
-                <div class="call-button mar-top-50">
-                    <button type="button" class="play-btn js-video-button" data-video-id="152879427" data-channel="vimeo"><i class="fa fa-play"></i></button>
-                </div>
-                <div class="video-figure"></div>
+                <h2 class="white mar-bottom-25">Get up to <span>20% off</span> on your next travel</h2>
+                <p>Choose the package you would like to offer to your clients andsend us an inquiry using the contact form.</p>
+                <a href="#" class="btn btn-orange mar-top-20">Get It Now <i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
     </section>
     <!-- Call To Action Ends -->
-    
-    <!-- counter starts -->
-    <section class="main-counter">
-        <div class="container">
-            <div class="counter-inner">
-                <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-counter-item">
-                        <h3 class="room">487</h3>
-                        <span>Rooms</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-counter-item">
-                        <h3 class="staff">1256</h3>
-                        <span>Staffs</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-counter-item">
-                        <h3 class="restaurant">16</h3>
-                        <span>Restaurant</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="main-counter-item">
-                        <h3 class="award">117</h3>
-                        <span>Awards</span>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- counter Ends -->
 
-    <!-- amenities starts -->
-    <section class="amenities">
+    <!-- Services Starts -->
+    <section class="services service-style-1">
         <div class="container">
             <div class="section-title">
-                <h3>Explore <span>Amenities</span></h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                <h2>Explore <span>Services</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
             </div>
-            <div class="amenities-content">
+            <div class="service-outer">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item mar-bottom-30">
-                            <div class="amt-icon">
-                                <i class="fa fa-glass" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature1.jpg' %}" alt="Image">
                             </div>
-                            <h4>Private bar</h4>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Gym & Exercises</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item mar-bottom-30">
-                            <div class="amt-icon">
-                                <i class="fa fa-car" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature2.jpg' %}" alt="Image">
                             </div>
-                            <h4>Transport</h4>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Beach Sight</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item mar-bottom-30">
-                            <div class="amt-icon">
-                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature5.jpg' %}" alt="Image">
                             </div>
-                            <h4>Free wifi</h4>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Massage</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item mar-bottom-30">
-                            <div class="amt-icon">
-                                <i class="fa fa-bath" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature6.jpg' %}" alt="Image">
                             </div>
-                            <h4>Laundry service</h4>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Swimming Pool</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item">
-                            <div class="amt-icon">
-                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature7.jpg' %}" alt="Image">
                             </div>
-                            <h4>Quick service</h4>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Restaurant</a></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item">
-                            <div class="amt-icon">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-item">
+                            <div class="service-image">
+                                <img src="{% static 'webapp/images/feature8.jpg' %}" alt="Image">
                             </div>
-                            <h4>City map</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item">
-                            <div class="amt-icon">
-                                <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            <div class="service-content">
+                                <h4><a href="service-detail.html">Futurethon</a></h4>
                             </div>
-                            <h4>Swimming pool</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="amt-item">
-                            <div class="amt-icon">
-                                <i class="fa fa-bolt" aria-hidden="true"></i>
-                            </div>
-                            <h4>Smoking free</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- amenities Ends -->
-    
+    <!-- Services Ends -->
+
     <!-- Gallery starts -->
-    <section class="content gallery gallery1">
+    <section class="content gallery">
+        <div class="section-title">
+            <h2>Beautiful View of <span>Gautama</span></h2>
+            <p class="mar-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+        </div>
         <div class="container">
-            <div class="section-title title-white">
-                <h4 class="yellow">Our Gallery</h4>
-                <h2 class="mar-0">Beautiful View of Gautama Hotel</h2>
+            <div class="gal-3-col">
+                <div class="masonry">
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery1.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery1.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery16.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery16.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery3.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery3.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery17.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery17.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery15.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery15.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick">
+                        <div class="gallery-item">
+                            <div class="gallery-image">
+                                <img src="{% static 'webapp/images/gallery/gallery5.jpg' %}" alt="image">
+                            </div>
+                            <div class="gallery-content">
+                                <ul>
+                                    <li><a href="images/gallery/gallery5.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    
-        <div class="gallery-main gallery-slider">
-            <div class="gallery-image">
-                <img src="images/gallery/gallery1.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery2.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery3.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery4.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery5.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery6.jpg" alt="1">
-            </div>
-            <div class="gallery-image">
-                <img src="images/gallery/gallery7.jpg" alt="1">
-            </div>
+
         </div>
     </section>
     <!-- Gallery Ends -->
 
     <!-- Reviews Starts -->
-    <section class="reviews">
+    <section class="reviews reviews-style-1">
         <div class="container">
-            <div class="section-title">
-                <h2>Top Client <span>Reviews</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-            </div>
-            <div class="review-slider1">
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="images/review1.jpg" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus suada faci lisis. </p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
+            <div class="row display-flex">
+                <div class="col-md-5 col-sm-12">
+                    <div class="section-title title-white mar-0">
+                        <h4 class="white">What People Says</h4>
+                        <h2>Happy Explore <span>Reviews</span></h2>
+                        <p class="mar-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                        <a href="testimonial.html" class="btn btn-orange">View More</a>
                     </div>
                 </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="images/review2.jpg" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus suada faci lisis. </p>
-                        <h4>Ketty Perry</h4>
-                        <span>Australia</span>
-                    </div>
-                </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="images/review1.jpg" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus suada faci lisis. </p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
+                <div class="col-md-7 col-sm-12">
+                    <div class="review-slider1">
+                        <div class="slider-item">
+                            <div class="slider-image">
+                                <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
+                            </div>
+                            <div class="slider-content">
+                                <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
+                                <h4>Micheal Clordy</h4>
+                                <span>Germany</span>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-image">
+                                <img src="{% static 'webapp/images/review2.jpg' %}" alt="image">
+                            </div>
+                            <div class="slider-content">
+                                <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
+                                <h4>Ketty Perry</h4>
+                                <span>Australia</span>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-image">
+                                <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
+                            </div>
+                            <div class="slider-content">
+                                <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
+                                <h4>Micheal Clordy</h4>
+                                <span>Germany</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="overlay"></div>
     </section>
     <!-- Reviews Ends -->
 
@@ -831,7 +834,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news1.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news1.jpg' %}" alt="image">
                             </div>
                             <div class="news-content">
                                 <p class="date mar-bottom-5">16 DECEMBER 2019</p>
@@ -849,7 +852,9 @@
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
-                            
+                            <div class="news-image">
+                                <img src="{% static 'webapp/images/news2.jpg' %}" alt="image">
+                            </div>
                             <div class="news-content">
                                 <p class="date mar-bottom-5">16 DECEMBER 2019</p>
                                 <h4><a href="single-right.html">Why choose Gautama Hotel to travel this summer</a></h4>
@@ -862,15 +867,12 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
                                 <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
                             </div>
-                            <div class="news-image">
-                                <img src="images/news2.jpg" alt="image">
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news3.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news3.jpg' %}" alt="image">
                             </div>
                             <div class="news-content">
                                 <p class="date mar-bottom-5">16 DECEMBER 2019</p>
@@ -892,33 +894,22 @@
     </section>
     <!-- News Ends -->
 
-    <!-- Newsletter Starts -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-main">
-                <div class="row">
-                <div class="col-md-7">
-                    <div class="section-title">
-                        <h2>Subscribe to our <span>Newsletter</span></h2>
-                        <p class="mar-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-                    </div>
-                </div>    
-                <div class="col-md-5">
-                    <div class="newsletter-form mar-top-25">
-                        <form>
-                            <input type="email" placeholder="Enter your email">
-                            <a href="#" class="btn btn-orange">SIGN UP</a>
-                        </form>
-                    </div>
-                </div>
-                </div>
-            </div>         
-        </div>
-    </section>
-    <!-- Newsletter Ends -->
-
     <!-- Footer Starts -->
-    <footer>
+    <footer class="footer-style-1">
+        <div class="newsletter">
+            <div class="container">
+                <div class="section-title title-white">
+                    <h2>Subscribe to our <span>Newsletter</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                </div>
+                <div class="newsletter-form">
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <a href="#" class="btn btn-orange">SIGN UP</a>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="footer-top">
             <div class="container">
                 <div class="footer-content">
@@ -931,9 +922,9 @@
                             <div class="footer-payment">
                                 <h4>We Accept</h4>
                                 <ul>
-                                    <li><img src="images/icons/visa.png" alt="image"></li>
-                                    <li><img src="images/icons/mastercard.png" alt="image"></li>
-                                    <li><img src="images/icons/americanexpress.png" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/visa.png' %}" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/mastercard.png' %}" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/americanexpress.png' %}" alt="image"></li>
                                 </ul>
                             </div>
                         </div>
@@ -985,7 +976,7 @@
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-content text-center">
-                    <p class="white">Copyright 2020. Made with <span><a href="https://cyclonethemes.com/">Cyclone Themes</a></span>. All Rights Reserved. <a href="#">Gautama</a></p>
+                    <p class="white">Copyright 2019. Made with <span><a href="https://cyclonethemes.com/">Cyclone Themes</a></span>. All Rights Reserved. <a href="#">Gautama</a></p>
                     <ul>
                         <li><a href="#" class="white"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -997,7 +988,7 @@
         </div>
     </footer>
     <!-- Footer Ends -->
-    
+
     <!-- Back to top start -->
     <div id="back-to-top">
         <a href="#"></a>
@@ -1008,7 +999,7 @@
         <div class="modal-dialog">
             <div class="login-content">
                 <div class="login-image">
-                    <img src="images/logo-black.png" alt="image">
+                    <img src="{% static 'webapp/images/logo-black.png' %}" alt="image">
                 </div>
                 <h3>Hello!Sign into your account</h3>
                 <form>
@@ -1041,7 +1032,7 @@
         <div class="modal-dialog">
             <div class="login-content">
                 <div class="login-image">
-                    <img src="images/logo-black.png" alt="image">
+                    <img src="{% static 'webapp/images/logo-black.png' %}" alt="image">
                 </div>
                 <h3>Awesome! Create a Gautama Account</h3>
                 <form>
@@ -1063,7 +1054,7 @@
                 </div>
                 <ul class="social-links">
                     <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa-bed fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
@@ -1072,12 +1063,13 @@
     </div>
 
     <!-- *Scripts* -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/custom-nav.js"></script>
-    <script src="js/custom-swiper2.js"></script>
-    <script src="js/custom-singledate.js"></script>
+    <script src="{% static 'webapp/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'webapp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'webapp/js/plugin.js' %}"></script>
+    <script src="{% static 'webapp/js/main.js' %}"></script>
+    <script src="{% static 'webapp/js/custom-nav.js' %}"></script>
+    <script src="{% static 'webapp/js/custom-swiper2.js' %}"></script>
+    <script src="{% static 'webapp/js/custom-singledate.js' %}"></script>
+
 </body>
 </html>

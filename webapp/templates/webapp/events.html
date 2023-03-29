@@ -8,7 +8,7 @@
 
     <title>Events Grid | Gautama</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png' %}">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'webapp/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--Default CSS-->
@@ -69,7 +69,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html">
-                            <img alt="Image" src="images/logo-black.png" class="logo-black">
+                            <img alt="Image" src="{% static 'webapp/images/logo-black.png' %}" class="logo-black">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,7 +83,7 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="index.html">Home Default</a></li>
                                             <li><a href="index-1.html">Home Video</a></li>
-                                            <li><a href="index-2.html">Home Slider</a></li>
+                                            <li><a href="index.html">Home Slider</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="index-3.html">Home New 1</a></li>
@@ -261,7 +261,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news12.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news12.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">16</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -279,7 +279,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news13.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news13.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">21</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -297,7 +297,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news14.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news14.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">25</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -315,7 +315,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news10.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news10.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">16</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -333,7 +333,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news11.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news11.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">21</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -351,7 +351,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="images/news9.jpg" alt="image">
+                                <img src="{% static 'webapp/images/news9.jpg' %}" alt="image">
                                 <p class="dates white"><span class="white">25</span> DEC 2019</p>
                             </div>
                             <div class="news-content">
@@ -400,9 +400,9 @@
                             <div class="footer-payment">
                                 <h4>We Accept</h4>
                                 <ul>
-                                    <li><img src="images/icons/visa.png" alt="image"></li>
-                                    <li><img src="images/icons/mastercard.png" alt="image"></li>
-                                    <li><img src="images/icons/americanexpress.png" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/visa.png' %}" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/mastercard.png' %}" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/americanexpress.png' %}" alt="image"></li>
                                 </ul>
                             </div>
                         </div>
@@ -477,7 +477,7 @@
         <div class="modal-dialog">
             <div class="login-content">
                 <div class="login-image">
-                    <img src="images/logo-black.png" alt="image">
+                    <img src="{% static 'webapp/images/logo-black.png' %}" alt="image">
                 </div>
                 <h3>Hello!Sign into your account</h3>
                 <form>
@@ -510,7 +510,7 @@
         <div class="modal-dialog">
             <div class="login-content">
                 <div class="login-image">
-                    <img src="images/logo-black.png" alt="image">
+                    <img src="{% static 'webapp/images/logo-black.png' %}" alt="image">
                 </div>
                 <h3>Awesome! Create a Gautama Account</h3>
                 <form>
@@ -541,11 +541,11 @@
     </div>
 
     <!-- *Scripts* -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/custom-nav.js"></script>
+    <script src="{% static 'webapp/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'webapp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'webapp/js/plugin.js' %}"></script>
+    <script src="{% static 'webapp/js/main.js' %}"></script>
+    <script src="{% static 'webapp/js/custom-nav.js' %}"></script>
 
 </body>
 </html>
