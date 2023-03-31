@@ -598,7 +598,7 @@ input:-moz-placeholder { /* Firefox 18- */
   .display-flex{display: block; }
 }
 
-.container{position: relative; z-index: 1;}
+.container{position: relative; z-index: 1; width: 1240px;}
 
 section{padding: 89px 0 100px; position: relative; background: #fff;}
 
@@ -611,7 +611,7 @@ section.icon-left:after{
   height: 500px;
   width: 100%;
   content: '';
-  background: url('../images/bg-icon-1.png') no-repeat;
+  background: url('../images/favicon.png') no-repeat;
   background-position: center;
   background-size: contain;
   top: 0;
@@ -624,7 +624,7 @@ section.icon-right:after{
   height: 400px;
   width: 80%;
   content: '';
-  background: url('../images/bg-icon-2.png') no-repeat;
+  background: url('../images/favicon.png') no-repeat;
   background-position: center;
   background-size: contain;
   top: 0;

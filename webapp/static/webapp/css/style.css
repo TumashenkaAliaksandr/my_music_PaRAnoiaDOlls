@@ -2334,9 +2334,37 @@ section.call-to-action.call-style-1{
   overflow: hidden;
 }
 
-section.call-to-action.call-style-1:after {
-    background: rgba(0,0,0,0.7);
+/*section.call-to-action.call-style-1:after {*/
+/*    background-image: url("../images/pd_dec.jpg");*/
+/*    background-size: cover; !* растягивает фон на всю площадь блока *!*/
+/*    background-position: center; !* выравнивает фон по центру *!*/
+/*}*/
+
+section.call-to-action.call-style-1 {
+    position: relative; /* устанавливаем позиционирование для блока */
+    height: 400px; /* высота блока */
+    width: 100%; /* ширина блока */
 }
+
+section.call-to-action.call-style-1:after {
+    content: ""; /* добавляем пустой элемент для отображения фоновой фотографии */
+    position: absolute; /* устанавливаем позиционирование для фотографии */
+    top: 0; /* отступ сверху */
+    left: 0; /* отступ слева */
+    width: 100%; /* ширина фотографии равна ширине блока */
+    height: 100%; /* высота фотографии равна высоте блока */
+    background-image: url("../images/pd_dec.jpg");
+    background-size: cover; /* растягиваем фон на всю площадь блока */
+    background-position: center; /* выравниваем фон по центру */
+    opacity: 1; /* начальное значение прозрачности */
+    transition: all 0.3s ease-in-out; /* добавляем эффект перехода */
+}
+
+section.call-to-action.call-style-1:hover:after {
+    transform: scale(0.9); /* уменьшаем размер фотографии */
+    opacity: 0.8; /* изменяем прозрачность */
+}
+
 
 section.call-to-action.call-style-1 h2 span{font-size: 64px;}
 
@@ -2797,7 +2825,7 @@ section.newsletter{padding-bottom: 97px;}
 
 section.newsletter:before {
     content: "";
-    background: url(../images/inbox-bg-icon.png) no-repeat scroll center center;
+    background: url(../images/pd_logo.png) no-repeat scroll center center;
     width: 252px;
     height: 155px;
     position: absolute;
@@ -3016,14 +3044,19 @@ footer li{
 
 .list-results .change-list.f-active i, .list-results .change-grid.f-active i, .list-results a:hover i {
     color: #ffa801;
-    transition: all ease-in-out 0.3;
 }
+
+.list-results .change-list.f-active i, .list-results .change-grid.f-active i, .list-results a:hover i {
+  transition: all 0.3s ease-in-out;
+}
+
 .list-results .change-grid i, .list-results .change-list i {
     line-height: 35px;
     text-align: center;
     color: #444;
     display: inline-block;
-    transition: all ease-in-out 0.3;
+    transition: all 0.3s ease-in-out;
+;
 }
 
 .list-filter{
