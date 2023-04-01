@@ -1157,7 +1157,6 @@ a.btn-wt{
     top: 0;
     left: 0;
 }
-
   .swiper-container {
       width: 100%;
       height: 100%;
@@ -1202,8 +1201,6 @@ a.btn-wt{
     z-index: 1;
     position: absolute;
     top: 23.4%;
-    left: 20px;
-    opacity: 0.5;
 }
 .slider .swiper-content h3{
     color: #fff;
@@ -1351,15 +1348,6 @@ section.banner.banner-style-2 .swiper-content{
   box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.15);
   padding:33px 30px 30px;
 }
-
-.banner-form.form-style-1 .form-content {
-  display: flex;
-  background: #fff;
-  padding: 40px 15px;
-  opacity: 0.8;
-}
-
-
 .table-item{
 	width: 100%;
 	padding: 0 10px;
@@ -2242,13 +2230,13 @@ section.related-rooms{padding-bottom: 80px;}
 /*          Call TO Action CSS        */
 /* ======================================== */
 
-/*section.call-to-action{*/
-/*	!*background: url("../images/pd_dec.jpg' %}") no-repeat;*!*/
-/*	background-position: center;*/
-/*	background-size: cover;*/
-/*	position: relative;*/
-/*  padding:85px 0 150px;*/
-/*}*/
+section.call-to-action{
+	background: url(../images/calltoaction.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+  padding:85px 0 150px;
+}
 
 .call-to-action:after{
 	content: '';
@@ -2336,37 +2324,9 @@ section.call-to-action.call-style-1{
   overflow: hidden;
 }
 
-/*section.call-to-action.call-style-1:after {*/
-/*    background-image: url("../images/pd_dec.jpg' %}");*/
-/*    background-size: cover; !* растягивает фон на всю площадь блока *!*/
-/*    background-position: center; !* выравнивает фон по центру *!*/
-/*}*/
-
-/*section.call-to-action.call-style-1 {*/
-/*    position: relative; !* устанавливаем позиционирование для блока *!*/
-/*    height: 400px; !* высота блока *!*/
-/*    width: 100%; !* ширина блока *!*/
-/*}*/
-
-/*section.call-to-action.call-style-1:after {*/
-/*    content: ""; !* добавляем пустой элемент для отображения фоновой фотографии *!*/
-/*    position: absolute; !* устанавливаем позиционирование для фотографии *!*/
-/*    top: 0; !* отступ сверху *!*/
-/*    left: 0; !* отступ слева *!*/
-/*    width: 100%; !* ширина фотографии равна ширине блока *!*/
-/*    height: 100%; !* высота фотографии равна высоте блока *!*/
-/*    background-image: url("../images/pd_dec.jpg' %}");*/
-/*    background-size: cover; !* растягиваем фон на всю площадь блока *!*/
-/*    background-position: center; !* выравниваем фон по центру *!*/
-/*    opacity: 1; !* начальное значение прозрачности *!*/
-/*    transition: all 0.3s ease-in-out; !* добавляем эффект перехода *!*/
-/*}*/
-
-/*section.call-to-action.call-style-1:hover:after {*/
-/*    transform: scale(0.9); !* уменьшаем размер фотографии *!*/
-/*    opacity: 0.8; !* изменяем прозрачность *!*/
-/*}*/
-
+section.call-to-action.call-style-1:after {
+    background: rgba(0,0,0,0.7);
+}
 
 section.call-to-action.call-style-1 h2 span{font-size: 64px;}
 
@@ -2488,10 +2448,10 @@ section.amenities{padding-top: 91px; background: #fff;}
     bottom: 20px;
     left: 20px;
     text-align: center;
+    background: #fff;
     width: calc(100% - 40px);
     padding: 20px 0;
     z-index: 2;
-    opacity: 0.8;
 }
 .service-content h4{
 	margin-bottom: 5px;
@@ -2542,7 +2502,6 @@ section.amenities{padding-top: 91px; background: #fff;}
     right: 0;
     z-index: 2;
     box-shadow: 0 0 20px #00000082;
-
 }
 
 .service-style-2{padding: 0;}
@@ -2828,7 +2787,7 @@ section.newsletter{padding-bottom: 97px;}
 
 section.newsletter:before {
     content: "";
-    background: url(../images/pd_logo.png) no-repeat scroll center center;
+    background: url(../images/Paranoia_Dolls-pla.png) no-repeat scroll center center;
     width: 252px;
     height: 155px;
     position: absolute;
@@ -3047,19 +3006,14 @@ footer li{
 
 .list-results .change-list.f-active i, .list-results .change-grid.f-active i, .list-results a:hover i {
     color: #ffa801;
+    transition: all 0.3s ease-in-out;
 }
-
-.list-results .change-list.f-active i, .list-results .change-grid.f-active i, .list-results a:hover i {
-  transition: all 0.3s ease-in-out;
-}
-
 .list-results .change-grid i, .list-results .change-list i {
     line-height: 35px;
     text-align: center;
     color: #444;
     display: inline-block;
     transition: all 0.3s ease-in-out;
-;
 }
 
 .list-filter{

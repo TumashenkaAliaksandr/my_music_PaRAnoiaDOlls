@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PaRAnoia| DOlls</title>
+    <title>PaRAnoia | DOlls</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'webapp/images/pdnof.png' %}">
     <!-- Bootstrap core CSS -->
@@ -21,8 +21,9 @@
     <!--Plugin CSS-->
     <link href="{% static 'webapp/css/plugin.css' %}" rel="stylesheet" type="text/css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
 </head>
 {% endblock %}
 
@@ -40,18 +41,25 @@
             <div class="container">
                 <div class="links links-left">
                     <ul>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> pd@gmail.com</a></li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +375336111777</a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> info@gautama.com</a></li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> 977-222-333-444</a></li>
+                        <li>
+                            <select>
+                                <option>Eng</option>
+                                <option>Fra</option>
+                                <option>Esp</option>
+                            </select>
+                        </li>
                     </ul>
                 </div>
                 <div class="links links-right pull-right">
                     <ul>
-                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i> Войти</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#register"><i class="fa fa-pen" aria-hidden="true"></i> Зарегестрироваться</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#register"><i class="fa fa-pen" aria-hidden="true"></i> Register</a></li>
                         <li>
                             <ul class="social-links">
-{#                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>#}
-{#                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>#}
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                             </ul>
@@ -66,26 +74,44 @@
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="{% url 'webapp:home' %}">
-                            <img alt="Image" src="{% static 'webapp/images/pdlogo1.png' %}" class="logo-black">
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="logo1" src="{% static 'webapp/images/logo-black.png' %}" class="logo-black">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav" id="responsive-menu">
                             <li class="dropdown submenu active">
-                                <a href="{% url 'webapp:home' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О группе</a>
-                            </li>
-                            <li class="submenu dropdown">
-                                <a href="roomlist-2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Концерты<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{% url 'webapp:events' %}">Гастрольный тур</a></li>
-                                    <li><a href="{% url 'webapp:about' %}">Прошедшие мероприятия</a></li>
-
+                                    <li class="submenu dropdown">
+                                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home Default<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="index.html">Home Default</a></li>
+                                            <li><a href="index-1.html">Home Video</a></li>
+                                            <li><a href="index-2.html">Home Slider</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="index-3.html">Home New 1</a></li>
+                                    <li><a href="index-4.html">Home New 2</a></li>
+                                    <li><a href="index-5.html">Home New 3</a></li>
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Афиша<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="roomlist-2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooms<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="roomlist-2.html">Room List</a></li>
+                                    <li><a href="roomlist-1.html">Room Grid</a></li>
+                                    <li><a href="detail-full.html">Room Detail</a></li>
+                                    <li><a href="detail-sidebar.html">Room Detail Sidebar</a></li>
+                                    <li><a href="availability.html">Check Availability</a></li>
+                                    <li><a href="room-select.html">Select Room</a></li>
+                                    <li><a href="booking.html">Booking Page</a></li>
+                                    <li><a href="confirmation.html">Confirmation Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="submenu dropdown">
                                         <a href="service.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service<i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -146,7 +172,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="restaurant.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Дискография<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="restaurant.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurant<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="restaurant.html">Home</a></li>
                                     <li><a href="restaurant-about.html">About Us</a></li>
@@ -155,7 +181,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="flight.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Новости<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="flight.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flights<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li> <a href="flight.html">Flight Homepage</a></li>
                                     <li> <a href="flight-grid-view.html">Grid View</a></li>
@@ -166,7 +192,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Магазин<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="shop.html">Shop List</a></li>
                                     <li><a href="shop-detail.html">Shop Single</a></li>
@@ -177,7 +203,7 @@
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
-                                <a href="blog-full.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Блог<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="blog-full.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="blog-full.html">Blog Fullwidth</a></li>
                                     <li><a href="blog-left.html">Blog Left</a></li>
@@ -188,13 +214,24 @@
                                     <li><a href="single-right.html">Single Right</a></li>
                                 </ul>
                             </li>
+                            <li class="submenu dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboard<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                    <li><a href="dashboard-my-profile.html">Dashboard Profile</a></li>
+                                    <li><a href="dashboard-booking.html">Dashboard Bookings</a></li>
+                                    <li><a href="dashboard-history.html">Dashboard History</a></li>
+                                    <li><a href="dashboard-list.html">Dashboard Listing</a></li>
+                                    <li><a href="dashboard-addtour.html">Dashboard Add Tour</a></li>
+                                    <li><a href="dashboard-reviews.html">Dashboard Reviews</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown submenu">
                                 <a href="cart.html" class="mt_cart"><i class="fa fa-shopping-cart"></i><span class="number-cart">1</span></a>
                             </li>
-
                         </ul>
                         <div class="nav-btn">
-                            <a href="#" class="btn btn-orange">Купить билет</a>
+                            <a href="#" class="btn btn-orange">Book Now</a>
                         </div>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -205,18 +242,102 @@
     </header>
     <!-- header Ends -->
 
-    <!-- banner starts -->
-    <section class="banner banner-style-1">
+        <!-- Banner start -->
+    <section class="banner">
         <div class="slider">
             <div class="swiper-container">
-                <iframe width="100%" height="600" src="https://www.youtube.com/embed/JZJRh5E0Bck?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/slider3.jpg' %})">
+                        <div class="swiper-content">
+{#                            <h3 data-animation="animated fadeInUp">Tour Dates and Tickets</h3>#}
+                            <h1 data-animation="animated fadeInUp">Даты  <span>Концерты</span> Билеты</h1>
+                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/slider2.jpg' %})">
+                        <div class="swiper-content">
+{#                            <h3 data-animation="animated fadeInUp">The lap of Luxury</h3>#}
+                            <h1 data-animation="animated fadeInUp">Даты <span>Концерты</span> Билеты</h1>
+                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/slider1.jpg' %})">
+                        <div class="swiper-content">
+{#                            <h3 data-animation="animated fadeInUp">As We Like to Keep It That Way</h3>#}
+                            <h1 data-animation="animated fadeInUp">Даты <span>Концерты</span> Билеты</h1>
+                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
+{#                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-wt">Заказать</a>#}
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
+            <div class="overlay"></div>
         </div>
+        <!-- banner form Start -->
+        <div class="banner-form">
+                <div class="container">
+                    <div class="form-content">
+                        <div class="table-item">
+                            <label>Check In</label>
+                            <div class="form-group">
+                                <div class="date-range-inner-wrapper">
+                                    <input id="date-range2" class="form-control" value="yyyy-mm-dd">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-item">
+                            <label>Check Out</label>
+                            <div class="form-group">
+                                <div class="date-range-inner-wrapper">
+                                    <input id="date-range3" class="form-control" value="yyyy-mm-dd">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-item">
+                            <label>Guests</label>
+                            <div class="form-group">
+                                <select>
+                                    <option value="1">0</option>
+                                    <option value="2">1</option>
+                                    <option value="3">2</option>
+                                    <option value="4">3</option>
+                                    <option value="5">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-item">
+                            <label>Nights</label>
+                            <div class="form-group">
+                                <select>
+                                    <option value="1">0</option>
+                                    <option value="2">1</option>
+                                    <option value="3">2</option>
+                                    <option value="4">3</option>
+                                    <option value="5">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-item">
+                            <div class="form-btn mar-top-35">
+                                <a class="btn btn-orange">Check Availability</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- banner form End -->
     </section>
+    <!-- Banner Ends -->
 
-    <!-- banner Ends -->
-
-    <!--script js for music-->
+    <!-- script js for music -->
 
     <script>
     function playAudio() {
@@ -224,7 +345,8 @@
       audio.play();
     }
     </script>
-    <!--end script js for music-->
+
+    <!-- end script js for music -->
 
 
     {% block content %}{% endblock %}
@@ -336,7 +458,7 @@
                 <div class="login-image">
                     <img src="{% static 'webapp/images/logo-black.png' %}" alt="image">
                 </div>
-                <h3>Hello!Sign into your account</h3>
+                <h3>Hello!Sign your account</h3>
                 <form>
                     <div class="form-group">
                         <input type="email" placeholder="Enter email address">
