@@ -1343,7 +1343,7 @@ section.banner.banner-style-2 .swiper-content{
 	position: relative;
 }
 .form-content{
-	display: flex;
+	display: none; /* убрал форму с глаз долой комп вершн */
   background: #fff;
   box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.15);
   padding:33px 30px 30px;
@@ -1617,7 +1617,7 @@ form style 1*/
 @media(max-width: 735px){
   .banner-form{position: relative; }
 
-  .form-content{display: block;}
+  .form-content{display: none;} /* убрал с глаз долой форму моб вершн*/
 
   .table-item{margin-bottom: 15px;}
 
