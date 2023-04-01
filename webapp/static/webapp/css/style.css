@@ -2448,7 +2448,7 @@ section.amenities{padding-top: 91px; background: #fff;}
     bottom: 20px;
     left: 20px;
     text-align: center;
-    background: #fff;
+    /*background: #fff;*/
     width: calc(100% - 40px);
     padding: 20px 0;
     z-index: 2;
