@@ -14,3 +14,6 @@ def events(request):
 
 def eventsdat(request):
     return render(request, 'webapp/events-detail.html')
+
+def tests_one(request):
+    return render(request, 'webapp/tests.html')

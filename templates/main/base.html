@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Home 3 | Gautama</title>
+    <title>PaRAnoia| DOlls</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'webapp/images/pdnof.png' %}">
     <!-- Bootstrap core CSS -->
@@ -21,8 +21,8 @@
     <!--Plugin CSS-->
     <link href="{% static 'webapp/css/plugin.css' %}" rel="stylesheet" type="text/css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' %}">
 </head>
 {% endblock %}
 
@@ -66,7 +66,7 @@
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="{% url 'webapp:home' %}">
                             <img alt="Image" src="{% static 'webapp/images/pdlogo1.png' %}" class="logo-black">
                         </a>
                     </div>
@@ -74,32 +74,14 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav" id="responsive-menu">
                             <li class="dropdown submenu active">
-                                <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О группе<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="submenu dropdown">
-                                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home Default<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="index.html">Home Default</a></li>
-                                            <li><a href="index-1.html">Home Video</a></li>
-                                            <li><a href="index-2.html">Home Slider</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="index-3.html">Home New 1</a></li>
-                                    <li><a href="index-4.html">Home New 2</a></li>
-                                    <li><a href="index-5.html">Home New 3</a></li>
-                                </ul>
+                                <a href="{% url 'webapp:home' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">О группе</a>
                             </li>
                             <li class="submenu dropdown">
                                 <a href="roomlist-2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Концерты<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="roomlist-2.html">Room List</a></li>
-                                    <li><a href="roomlist-1.html">Room Grid</a></li>
-                                    <li><a href="detail-full.html">Room Detail</a></li>
-                                    <li><a href="detail-sidebar.html">Room Detail Sidebar</a></li>
-                                    <li><a href="availability.html">Check Availability</a></li>
-                                    <li><a href="room-select.html">Select Room</a></li>
-                                    <li><a href="booking.html">Booking Page</a></li>
-                                    <li><a href="confirmation.html">Confirmation Page</a></li>
+                                    <li><a href="{% url 'webapp:events' %}">Гастрольный тур</a></li>
+                                    <li><a href="{% url 'webapp:about' %}">Прошедшие мероприятия</a></li>
+
                                 </ul>
                             </li>
                             <li class="submenu dropdown">
@@ -227,36 +209,25 @@
     <section class="banner banner-style-1">
         <div class="slider">
             <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url({%  static 'webapp/images/pd3.jpg' %})">
-                        <div class="swiper-content" style="position: center; top: 20px; left: 20px;">
-                            <h1 data-animation="animated fadeInUp">PaRAnoia<span>DOlls</span></h1>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/pd4.jpg' %})">
-                        <div class="swiper-content">
-                            <h1 data-animation="animated fadeInUp"><span>Spend Holidays</span> With HOtel Gautama</h1>
-                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or"> Explore Our Rooms</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url({%  static 'webapp/images/pd15.jpg' %})">
-                        <div class="swiper-content">
-                            <h1 data-animation="animated fadeInUp">Купи <span>Билеты</span> на наши концерты!</h1>
-                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or"> Buy</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/JZJRh5E0Bck?autoplay=1" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="overlay"></div>
         </div>
     </section>
+
     <!-- banner Ends -->
 
+    <!--script js for music-->
 
-{% block content %}{% endblock %}
+    <script>
+    function playAudio() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    }
+    </script>
+    <!--end script js for music-->
+
+
+    {% block content %}{% endblock %}
 
     <!-- Footer Starts -->
     <footer class="footer-style-1">
@@ -435,4 +406,5 @@
     <script src="{% static 'webapp/js/custom-swiper2.js' %}"></script>
     <script src="{% static 'webapp/js/custom-singledate.js' %}"></script>
 
+</body>
 </html>
