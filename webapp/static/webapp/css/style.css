@@ -1213,12 +1213,15 @@ a.btn-wt{
     font-weight: normal;
     display: inline-block;
 }
-.swiper-content h1{
-    color: #FFF;
-    font-size: 54px;
-    line-height: normal;
-    margin-bottom: 20px;
+.swiper-content h1 {
+  color: #FFF;
+  font-size: 54px;
+  line-height: normal;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  font-family: "inndam", sans-serif; /* Выбираем ретро шрифт */
 }
+
 
 
 .swiper-content p{
