@@ -1131,8 +1131,9 @@ section.banner{
 a.slider-btn{
 	padding: 15px 20px 13px;
 	display: inline-block;
-	background: #ffa801;
-	color: #fff;
+	background: rgba(255, 168, 1, 0); /* прозрачный фон */
+	color: #ffa801;
+    border: 2px solid #ffa801; /* желтый контур */
 	text-transform: uppercase;
 }
 a.slider-btn:hover{
