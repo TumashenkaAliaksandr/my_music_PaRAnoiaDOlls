@@ -15,7 +15,7 @@
                     <p class="mar-0">фото/видео</p>
                 </div>
                 <div class="col-md-4">
-                    <a href="#" class="btn btn-black pull-right">Посмотреть еще</a>
+                    <a href="{% url 'webapp:events' %}" class="btn btn-black pull-right">Посмотреть еще</a>
                 </div>
                 </div>
             </div>
@@ -364,58 +364,6 @@
     <!-- Room Ends -->
 
 
-    <!-- Reviews Starts -->
-    <section class="reviews reviews-style-1">
-        <div class="container">
-            <div class="row display-flex">
-                <div class="col-md-5 col-sm-12">
-                    <div class="section-title title-white mar-0">
-                        <h4 class="white">What People Says</h4>
-                        <h2>Happy Explore <span>Reviews</span></h2>
-                        <p class="mar-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-                        <a href="testimonial.html" class="btn btn-orange">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-7 col-sm-12">
-                    <div class="review-slider1">
-                        <div class="slider-item">
-                            <div class="slider-image">
-                                <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
-                            </div>
-                                <div class="slider-content">
-                                    <p><i></i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
-                                    <h4>Micheal Clordy</h4>
-                                    <span>Germany</span>
-                                </div>
-                        </div>
-                        <div class="slider-item">
-                            <div class="slider-image">
-                                <img src="{% static 'webapp/images/review2.jpg' %}" alt="image">
-                            </div>
-                            <div class="slider-content">
-                                <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
-                                <h4>Ketty Perry</h4>
-                                <span>Australia</span>
-                            </div>
-                        </div>
-                        <div class="slider-item">
-                            <div class="slider-image">
-                                <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
-                            </div>
-                            <div class="slider-content">
-                                <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit.</p>
-                                <h4>Micheal Clordy</h4>
-                                <span>Germany</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="overlay"></div>
-    </section>
-    <!-- Reviews Ends -->
-
     <!-- News Starts -->
     <section class="news">
         <div class="container">
@@ -488,4 +436,18 @@
     </section>
     <!-- News Ends -->
 
+    <!-- Call To Action Starts -->
+    <section class="call-to-action">
+      <div class="container">
+        <div class="call-content text-center">
+          <h2 class="white mar-bottom-25">PaRAnoia <span></span> DOlls</h2>
+          <div class="call-button mar-top-50">
+            <button type="button" class="play-btn js-video-button" data-video-id="kOe_-81Uyew" data-channel="youtube"><i class="fa fa-play"></i></button>
+          </div>
+          <div class="video-figure"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action Ends -->
     {% endblock %}

@@ -4,7 +4,7 @@ def index(request):
     return render(request, 'webapp/index.html')
 
 def about(request):
-    return render(request, 'webapp/aboutus.html')
+    return render(request, 'webapp/about.html')
 
 def gallery(request):
     return render(request, 'webapp/gallery.html')
