@@ -22,16 +22,22 @@
     <!-- pd mp3 starts-->
     <section class="about-team">
         <div class="container">
-            <div class="section-title">
-                <h2>PD <span>Mp3</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et,
-                    auctor vulputate quam donec vitae consectetur turpis</p>
-            </div>
-
                 <div class="col-md-4">
                     <div class="team-item">
                         <div class="team-image">
                             <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                        </div>
+                        <div class="service-content">
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-2011-belaya-luna.mp3' %}"
+                                   controls></audio>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_dec.png' %}" alt="image">
                         </div>
                         <div class="service-content">
                             <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
@@ -43,10 +49,10 @@
                 <div class="col-md-4">
                     <div class="team-item">
                         <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_prlove.png' %}" alt="image">
                         </div>
                         <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-prosili-lyubvi-ost-igrok.mp3' %}"
                                    controls></audio>
                         </div>
                     </div>
@@ -55,10 +61,10 @@
                 <div class="col-md-4">
                     <div class="team-item">
                         <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_nark.png' %}" alt="image">
                         </div>
                         <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-narkoman.mp3' %}"
                                    controls></audio>
                         </div>
                     </div>
@@ -66,22 +72,6 @@
         </div>
     </section>
     <!-- pd mp3 Ends -->
-
-{#    <!-- about video starts -->#}
-{#    <section class="video-box">#}
-{#        <div class="container">#}
-{#            <div class="section-title">#}
-{#                <h3 class="white mar-0">Take a Tour</h3>#}
-{#                <div class="call-button">#}
-{#                    <button type="button" class="play-btn js-video-button" data-video-id="152879427"#}
-{#                            data-channel="vimeo"><i class="fa fa-play"></i></button>#}
-{#                </div>#}
-{#                <div class="video-figure"></div>#}
-{#                <h4 class="white mar-0">0f our wounderfull resort</h4>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-{#    <!-- about video Ends -->#}
 
     <!-- top concerts starts -->
     <section class="top-hotel">
@@ -93,7 +83,7 @@
                     <p class="mar-0">фото/видео</p>
                 </div>
                 <div class="col-md-4">
-                    <a href="{% url 'webapp:events' %}" class="btn btn-black pull-right">Посмотреть еще</a>
+                    <a href="{% url 'webapp:eventsdat' %}" class="btn btn-orange pull-right">Посмотреть еще</a>
                 </div>
                 </div>
             </div>
