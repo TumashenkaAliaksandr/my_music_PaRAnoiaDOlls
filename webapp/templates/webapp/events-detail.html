@@ -7,11 +7,11 @@
     <section class="breadcrumb-outer">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>Events</h2>
+                <h2>Афиша</h2>
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Events Details</li>
+                        <li class="breadcrumb-item"><a href="{% url 'webapp:home' %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">На главную</li>
                     </ul>
                 </nav>
             </div>
@@ -26,42 +26,37 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
                         <div class="title mar-bottom-30">
-                            <h5 class="mar-bottom-5">Fulfill Your Dream @ Gautama</h5>
-                            <h2>Wedding Ceremony Of <span>John & Ina</span></h2>
+                            <h5 class="mar-bottom-5">PaRAnoiaDOlls</h5>
+                            <h2>РОК-ВОЛНА <span>Наше Лето 2023</span></h2>
                         </div>
                         <div class="news-image">
-                            <img src="{% static 'webapp/images/news12.jpg' %}" alt="image" class="width">
+                            <img src="{% static 'webapp/images/summer.jpg' %}" alt="image" class="width">
                         </div>
                         <div class="events-detail mar-top-30">
                             <div class="news-content pad-0">
-                                <h4>EVENT DESCRIPTION</h4>
-                                <p class="mar-0">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry’s standard dummy text ever since the
-                                    1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centuries, but also the leap into
-                                    electronic typesetting, remaining essentially unchanged.</p>
+                                <h4>ОПИСАНИЕ МЕРОПРИЯТИЯ</h4>
+                                <p class="mar-0">"Рок Волна Наше Лето 2023" - это грандиозный музыкальный фестиваль,
+                                    который соберет вместе лучшие рок-группы со всего мира.
+                                    Фестиваль пройдет на просторной площадке на берегу моря,
+                                    где посетители смогут наслаждаться потрясающими выступлениями,
+                                    а также отдыхать на пляже и наслаждаться живописными пейзажами..</p>
                             </div>
                         </div>
                         <div class="events-detail mar-top-30">
                             <div class="news-content pad-0">
-                                <h4>EVENT CONTENT</h4>
+                                <h4>КОНТЕНТ СОБЫТИЯ</h4>
                                 <ul class="event-list-content">
-                                    <li>Over 37 lectures and 55.5 hours of content!</li>
-                                    <li>LIVE PROJECT End to End Software Testing Training Included.</li>
-                                    <li>Learn Software Testing and Automation basics from a professional trainer
-                                        from your own desk.
-                                    </li>
-                                    <li>Information packed practical training starting from basics to advanced
-                                        testing techniques.
-                                    </li>
-                                    <li>Best suitable for beginners to advanced level users and who learn faster
-                                        when demonstrated.
-                                    </li>
+                                    <li>Ярмарка рок-атрибутики</li>
+                                    <li>Мастер-классы от звезд музыки и фильмов.</li>
+                                    <li>Экскурсии по местным достопримечательностям.</li>
+                                    <li>Будет работать множество кафе и ресторанов,
+                                        где гости смогут насладиться разнообразными блюдами местной кухни.</li>
+                                    <li>Специальная зона для фотографирования.</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-review news-content pad-0 mar-top-30">
-                            <h4>3 Comments</h4>
+                            <h4>3 комментария</h4>
                             <div class="review-outer">
                                 <ul>
                                     <li>
@@ -114,7 +109,7 @@
                                 </ul>
                             </div>
                             <div class="comment-box mar-top-20">
-                                <h4>Leave a message</h4>
+                                <h4>Оставить комментарий</h4>
                                 <form class="mar-top-30">
                                     <div class="row">
                                         <div class="form-group col-xs-6">
@@ -134,7 +129,7 @@
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="comment-btn">
-                                                <a href="#" class="btn btn-orange">Submit</a>
+                                                <a href="#" class="btn btn-orange">отправить</a>
                                             </div>
                                         </div>
                                     </div>
@@ -145,52 +140,51 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="Sidebar">
                             <div class="sidebar-search sidebar-item">
-                                <h4>Search our site</h4>
+                                <h4>Поиск по сайту</h4>
                                 <form>
-                                    <input type="text" placeholder="Keyword">
+                                    <input type="text" placeholder="ввод">
                                     <a href="#">Go</a>
                                 </form>
                             </div>
                             <div class="sidebar-info sidebar-item">
                                 <div class="info">
                                     <ul>
-                                        <li class="title"><i class="fa fa-clock"></i> Start Time</li>
-                                        <li class="item">Sunday, July 15, 2018 <span>8:00 am</span></li>
+                                        <li class="title"><i class="fa fa-clock"></i> Старт события</li>
+                                        <li class="item">Пятница, Июль 15, 2023 <span>8:00 am</span></li>
                                     </ul>
                                     <ul>
-                                        <li class="title"><i class="fa fa-clock"></i> Finish Time</li>
-                                        <li class="item">Sunday, July 15, 2018 <span>5:00 pm</span></li>
+                                        <li class="title"><i class="fa fa-clock"></i> Конец события</li>
+                                        <li class="item">Воскресенье, Июль 17, 2023 <span>5:00 pm</span></li>
                                     </ul>
                                     <ul>
-                                        <li class="title"><i class="fa fa fa-map-marker"></i> Address</li>
-                                        <li class="item">Paris, French</li>
+                                        <li class="title"><i class="fa fa fa-map-marker"></i> Адресс</li>
+                                        <li class="item">Крым, Украина</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="sidebar-book-event">
-                                <h4>Buy Ticket</h4>
+                                <h4>Купить Билет</h4>
                                 <form role="search" class="book_event">
                                     <ul>
                                         <li>
-                                            <div class="label">Total Slots</div>
+                                            <div class="label">Всего</div>
                                             <div class="value">500</div>
                                         </li>
                                         <li>
-                                            <div class="label">Booked Slots</div>
+                                            <div class="label">Забронировано</div>
                                             <div class="value">200</div>
                                         </li>
                                         <li class="event-cost">
-                                            <div class="label">Cost</div>
+                                            <div class="label">Стоимость</div>
                                             <div class="value">$20/Slot</div>
                                         </li>
                                         <li>
-                                            <div class="label">Quantity</div>
+                                            <div class="label">Количество</div>
                                             <div class="value"><input type="number" name="qty" value="1" min="1"></div>
                                         </li>
                                     </ul>
                                     <div class="button text-center pad-top-15 pad-bottom-15"><a href="#"
-                                                                                                class="btn btn-orange">Book
-                                        Now</a></div>
+                                                                                                class="btn btn-orange">Купить сейчас</a></div>
                                 </form>
                             </div>
                         </div>

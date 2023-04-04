@@ -6,11 +6,11 @@
     <section class="breadcrumb-outer">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>About us 2</h2>
+                <h2>Дискография</h2>
                 <nav aria-label="breadcrumb">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">About us 2</li>
+                        <li class="breadcrumb-item"><a href="{% url 'webapp:home' %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">На главную</li>
                     </ul>
                 </nav>
             </div>
@@ -18,339 +18,137 @@
     </section>
     <!-- breadcrumb Ends -->
 
-    <!-- about starts -->
-    <section class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="about-para mar-top-50">
-                        <h3>About <span>Gautam</span></h3>
-                        <h4 class="text-capitalize">Pick a room that best suits your taste and budget</h4>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                            est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                            numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-                            enim ad minima veniam. </p>
-                        <h5 class="text-capitalize">eque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incid dolor sit amet,
-                            consectetur, adipisci velit</h5>
-                        <div class="about-para-list mar-top-20">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="about-icon"><i class="fa fa-chess-queen"></i> Awesome Nature</div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="about-icon"><i class="fa fa-chess-queen"></i> Awaded Best Hotel</div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="about-icon"><i class="fa fa-chess-queen"></i> Online Booking</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="about-us-image mar-top-50">
-                        <img src="{% static 'webapp/images/gallery/gallery1.jpg' %}" alt="image">
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- about Ends -->
-
-    <!-- about Faq Starts -->
-    <section class="about-faq">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-sm-12 col-xs-12">
-                    <div class="about-us-image">
-                        <img src="{% static 'webapp/images/gallery/gallery2.jpg' %}" alt="image">
-                    </div>
-                </div>
-                <div class="col-md-7 col-sm-12 col-xs-12">
-                    <div class="info-detail">
-                        <div class="accrodion-grp" data-grp-name="faq-accrodion">
-                            <div class="accrodion active">
-                                <div class="accrodion-title">
-                                    <h4>How can I improve my oral hygiene?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: block;">
-                                    <div class="inner">
-                                        <p>Everyone’s needs are different, so have a chat to your dentist about how
-                                            often you need to have your teeth checked by them based on the condition of
-                                            your mouth, teeth and gums.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion ">
-                                <div class="accrodion-title">
-                                    <h4>How do I know if my teeth are healthy?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: none;">
-                                    <div class="inner">
-                                        <p>Everyone’s needs are different, so have a chat to your dentist about how
-                                            often you need to have your teeth checked by them based on the condition of
-                                            your mouth, teeth and gums.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
-                                    <h4>Why are regular dental assessments so important?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: none;">
-                                    <div class="inner">
-                                        <p>Everyone’s needs are different, so have a chat to your dentist about how
-                                            often you need to have your teeth checked by them based on the condition of
-                                            your mouth, teeth and gums.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
-                                    <h4>What if I have to cancel my appointment?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: none;">
-                                    <div class="inner">
-                                        <p>Sometimes the unexpected happens and you need to cancel your appointment make
-                                            sure you call us or email us 1 day ago before cancellation.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
-                                    <h4>What do I need to bring to my appointment?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: none;">
-                                    <div class="inner">
-                                        <p>Sometimes the unexpected happens and you need to cancel your appointment make
-                                            sure you call us or email us 1 day ago before cancellation.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                            <div class="accrodion">
-                                <div class="accrodion-title">
-                                    <h4>What are the facilities available in the hospital?</h4>
-                                </div>
-                                <div class="accrodion-content" style="display: none;">
-                                    <div class="inner">
-                                        <p>Sometimes the unexpected happens and you need to cancel your appointment make
-                                            sure you call us or email us 1 day ago before cancellation.</p>
-                                    </div><!-- /.inner -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- about Faq Ends -->
-
-    <!-- about video starts -->
-    <section class="video-box">
-        <div class="container">
-            <div class="section-title">
-                <h3 class="white mar-0">Take a Tour</h3>
-                <div class="call-button">
-                    <button type="button" class="play-btn js-video-button" data-video-id="152879427"
-                            data-channel="vimeo"><i class="fa fa-play"></i></button>
-                </div>
-                <div class="video-figure"></div>
-                <h4 class="white mar-0">0f our wounderfull resort</h4>
-            </div>
-        </div>
-    </section>
-    <!-- about video Ends -->
-
-    <!-- about team starts-->
+    <!-- pd mp3 starts-->
     <section class="about-team">
         <div class="container">
             <div class="section-title">
-                <h2>Explore <span>Team</span></h2>
+                <h2>PD <span>Mp3</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et,
                     auctor vulputate quam donec vitae consectetur turpis</p>
             </div>
-            <div class="row team-slider1">
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/team1.jpg' %}" alt="image">
-                        </div>
-                        <div class="team-content">
-                            <h4>John Anderson</h4>
-                            <p>Ceo and Founder</p>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/team2.jpg' %}" alt="image">
-                        </div>
-                        <div class="team-content">
-                            <h4>Erina Gray</h4>
-                            <p>Managing Director</p>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/team3.jpg' %}" alt="image">
-                        </div>
-                        <div class="team-content">
-                            <h4>Micheal Carter</h4>
-                            <p>Supervisor</p>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/team4.jpg' %}" alt="image">
-                        </div>
-                        <div class="team-content">
-                            <h4>Nelson Roar</h4>
-                            <p>Project Manager</p>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- about team Ends -->
 
-    <!-- Reviews Starts -->
-    <section class="reviews">
-        <div class="container">
-            <div class="section-title">
-                <h2>Explore <span>Reviews</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et,
-                    auctor vulputate quam donec vitae consectetur turpis</p>
-            </div>
-            <div class="review-slider1">
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse
-                            cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                            odio ipsum. </p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
+                <div class="col-md-4">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                        </div>
+                        <div class="service-content">
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
+                                   controls></audio>
+                        </div>
                     </div>
                 </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="{% static 'webapp/images/review2.jpg' %}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse
-                            cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                            odio ipsum. </p>
-                        <h4>Ketty Perry</h4>
-                        <span>Australia</span>
-                    </div>
-                </div>
-                <div class="slider-item">
-                    <div class="slider-image">
-                        <img src="{% static 'webapp/images/review1.jpg' %}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <p><i>“</i> Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse
-                            cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                            odio ipsum. </p>
-                        <h4>Micheal Clordy</h4>
-                        <span>Germany</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Reviews Ends -->
 
-    <!-- Services Starts -->
-    <section class="services">
+                <div class="col-md-4">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                        </div>
+                        <div class="service-content">
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
+                                   controls></audio>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="team-item">
+                        <div class="team-image">
+                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                        </div>
+                        <div class="service-content">
+                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
+                                   controls></audio>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- pd mp3 Ends -->
+
+{#    <!-- about video starts -->#}
+{#    <section class="video-box">#}
+{#        <div class="container">#}
+{#            <div class="section-title">#}
+{#                <h3 class="white mar-0">Take a Tour</h3>#}
+{#                <div class="call-button">#}
+{#                    <button type="button" class="play-btn js-video-button" data-video-id="152879427"#}
+{#                            data-channel="vimeo"><i class="fa fa-play"></i></button>#}
+{#                </div>#}
+{#                <div class="video-figure"></div>#}
+{#                <h4 class="white mar-0">0f our wounderfull resort</h4>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{#    <!-- about video Ends -->#}
+
+    <!-- top concerts starts -->
+    <section class="top-hotel">
         <div class="container">
-            <div class="section-title">
-                <h2>Explore <span>Services</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et,
-                    auctor vulputate quam donec vitae consectetur turpis</p>
+            <div class="top-title">
+                <div class="row display-flex">
+                <div class="col-md-8">
+                    <h2><span>Концерты</span></h2>
+                    <p class="mar-0">фото/видео</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'webapp:events' %}" class="btn btn-black pull-right">Посмотреть еще</a>
+                </div>
+                </div>
             </div>
-            <div class="service-outer">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="{% static 'webapp/images/service1.jpg' %}" alt="Image">
-                            </div>
-                            <div class="service-content">
-                                <h4 class="mar-0"><a href="service-detail.html">Restaurant</a></h4>
-                            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="top-hotels-ii">
+                        <img src="{% static 'webapp/images/aphisha8.jpg' %}" alt="hotel-image">
+                        <h4>Три Шурупа</h4>
+                        <div class="pp-details yellow">
+                            <span class="pull-left">Гродно</span>
+                            <span class="pp-tour-ar">
+                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
+                            </span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="{% static 'webapp/images/service2.jpg' %}" alt="Image">
-                            </div>
-                            <div class="service-content">
-                                <h4 class="mar-0"><a href="service-detail.html">Massage</a></h4>
-                            </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="top-hotels-ii">
+                        <img src="{% static 'webapp/images/aphisha2.jpg' %}" alt="hotel-image">
+                        <h4>Exit</h4>
+                        <div class="pp-details yellow">
+                            <span class="pull-left">XX век</span>
+                            <span class="pp-tour-ar">
+                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
+                            </span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="{% static 'webapp/images/service3.jpg' %}" alt="Image">
-                            </div>
-                            <div class="service-content">
-                                <h4 class="mar-0"><a href="service-detail.html">Conference Room</a></h4>
-                            </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="top-hotels-ii">
+                        <img src="{% static 'webapp/images/aphisha7.jpg' %}" alt="hotel-image">
+                        <h4>Полоцк</h4>
+                        <div class="pp-details yellow">
+                            <span class="pull-left">Клуб Сфера</span>
+                            <span class="pp-tour-ar">
+                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
+                            </span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="{% static 'webapp/images/service4.jpg' %}" alt="Image">
-                            </div>
-                            <div class="service-content">
-                                <h4 class="mar-0"><a href="service-detail.html">Coffee Mania</a></h4>
-                            </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="top-hotels-ii">
+                        <img src="{% static 'webapp/images/aphisha4.jpg' %}" alt="hotel-image">
+                        <h4>Реактор</h4>
+                        <div class="pp-details yellow">
+                            <span class="pull-left">Минск</span>
+                            <span class="pp-tour-ar">
+                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Services Ends -->
+    <!-- top concerts ends -->
 
 {% endblock %}

@@ -96,7 +96,7 @@
                             </li>
                         </ul>
                         <div class="nav-btn">
-                            <a href="#" class="btn btn-orange">Купить Билет</a>
+                            <a href="{% url 'webapp:eventsdat' %}" class="btn btn-orange">Купить Билет</a>
                         </div>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -107,100 +107,6 @@
     </header>
     <!-- header Ends -->
 
-        <!-- Banner start -->
-    <section class="banner">
-        <div class="slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd15.jpg' %})">
-                        <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">Tour Dates and Tickets</h3>#}
-                            <h1 data-animation="animated fadeInUp">Даты  <span>Концерты</span> Билеты</h1>
-                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd3.jpg' %})">
-                        <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">The lap of Luxury</h3>#}
-                            <h1 data-animation="animated fadeInUp">Даты <span>Концерты</span> Билеты</h1>
-                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or">Заказать</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd4.jpg' %})">
-                        <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">As We Like to Keep It That Way</h3>#}
-                            <h1 data-animation="animated fadeInUp">Даты <span>Концерты</span> Билеты</h1>
-                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
-{#                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-wt">Заказать</a>#}
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="overlay"></div>
-        </div>
-        <!-- banner form Start -->
-        <div class="banner-form">
-                <div class="container">
-                    <div class="form-content">
-                        <div class="table-item">
-                            <label>Check In</label>
-                            <div class="form-group">
-                                <div class="date-range-inner-wrapper">
-                                    <input id="date-range2" class="form-control" value="yyyy-mm-dd">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-item">
-                            <label>Check Out</label>
-                            <div class="form-group">
-                                <div class="date-range-inner-wrapper">
-                                    <input id="date-range3" class="form-control" value="yyyy-mm-dd">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-item">
-                            <label>Guests</label>
-                            <div class="form-group">
-                                <select>
-                                    <option value="1">0</option>
-                                    <option value="2">1</option>
-                                    <option value="3">2</option>
-                                    <option value="4">3</option>
-                                    <option value="5">4</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="table-item">
-                            <label>Nights</label>
-                            <div class="form-group">
-                                <select>
-                                    <option value="1">0</option>
-                                    <option value="2">1</option>
-                                    <option value="3">2</option>
-                                    <option value="4">3</option>
-                                    <option value="5">4</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="table-item">
-                            <div class="form-btn mar-top-35">
-                                <a class="btn btn-orange">Check Availability</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <!-- banner form End -->
-    </section>
-    <!-- Banner Ends -->
 
     <!-- script js for music -->
 

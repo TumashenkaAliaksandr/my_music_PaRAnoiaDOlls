@@ -2447,16 +2447,25 @@ section.amenities{padding-top: 91px; background: #fff;}
     transform: scale(1.1);
      transition: all ease-in-out 0.5s;
 }
-.service-content{
-	position: absolute;
-    bottom: 20px;
-    left: 20px;
-    text-align: center;
-    /*background: #fff;*/
-    width: calc(100% - 40px);
-    padding: 20px 0;
-    z-index: 2;
+.service-content {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 2;
 }
+
+.service-content audio {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  width: 300px; /* Change this value to adjust the width of the audio player */
+}
+
+
 .service-content h4{
 	margin-bottom: 5px;
 	color: #ffa801;
