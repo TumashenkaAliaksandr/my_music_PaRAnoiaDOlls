@@ -79,21 +79,10 @@
                             <li {% if request.resolver_match.url_name == 'gallery' %}class="active"{% endif %}><a href="{% url 'webapp:gallery' %}" class="nav-link">Концерты</a></li>
                             <li {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}><a href="{% url 'webapp:about' %}" class="nav-link">Дискография</a></li>
                             <li {% if request.resolver_match.url_name == 'events' %}class="active"{% endif %}><a href="{% url 'webapp:events' %}" class="nav-link">Мерч</a></li>
-                            <li class="submenu dropdown">
-                                <a href="blog-full.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Блог<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog-full.html">Blog Fullwidth</a></li>
-                                    <li><a href="blog-left.html">Blog Left</a></li>
-                                    <li><a href="blog-right.html">Blog Right</a></li>
-                                    <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                    <li><a href="single-full.html">Blog Single</a></li>
-                                    <li><a href="single-left.html">Single Left</a></li>
-                                    <li><a href="single-right.html">Single Right</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown submenu">
-                                <a href="cart.html" class="mt_cart"><i class="fa fa-shopping-cart"></i><span class="number-cart">1</span></a>
-                            </li>
+                            <li {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'single' %}class="active"{% endif %}><a href="{% url 'blog:blog' %}" class="nav-link">Блог</a></li>
+{#                            <li class="dropdown submenu">#}
+{#                                <a href="cart.html" class="mt_cart"><i class="fa fa-shopping-cart"></i><span class="number-cart">1</span></a>#}
+{#                            </li>#}
                         </ul>
                         <div class="nav-btn">
                             <a href="{% url 'webapp:eventsdat' %}" class="btn btn-orange">Купить Билет</a>
