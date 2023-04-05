@@ -11,7 +11,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('events/', events, name='events'),
     path('eventsdat/', eventsdat, name='eventsdat'),
-    path('concerts/', concerts, name='concerts'),
+    path('concert/', concert, name='concert'),
     path('tests_one/', tests_one, name='tests_one'),
     path('news/', NewsListView.as_view(), name='news_list'),
 

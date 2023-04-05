@@ -76,7 +76,7 @@
                         <ul class="nav navbar-nav" id="responsive-menu">
                             <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}><a href="{% url 'webapp:home' %}" class="nav-link">О группе</a></li>
                             <li {% if request.resolver_match.url_name == 'eventsdat' %}class="active"{% endif %}><a href="{% url 'webapp:eventsdat' %}" class="nav-link">Афиша</a></li>
-                            <li {% if request.resolver_match.url_name == 'concerts' %}class="active"{% endif %}><a href="{% url 'webapp:concerts' %}" class="nav-link">Концерты</a></li>
+                            <li {% if request.resolver_match.url_name == 'concert' %}class="active"{% endif %}><a href="{% url 'webapp:concert' %}" class="nav-link">Концерты</a></li>
                             <li {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}><a href="{% url 'webapp:about' %}" class="nav-link">Дискография</a></li>
                             <li {% if request.resolver_match.url_name == 'events' %}class="active"{% endif %}><a href="{% url 'webapp:events' %}" class="nav-link">Мерч</a></li>
                             <li {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'single' %}class="active"{% endif %}><a href="{% url 'blog:blog' %}" class="nav-link">Блог</a></li>

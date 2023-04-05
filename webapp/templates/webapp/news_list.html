@@ -27,13 +27,14 @@
                 <div class="col-md-12">
                     <div class="list-content">
                         <div class="row">
+                            {% for concert in concerts %}
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="news-item">
                                     <div class="news-image">
                                         <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
                                     </div>
                                     <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
+                                        <p class="date">{{ concert.date }}</p>
                                         <h4>Why choose Gautama Hotel to travel this summer</h4>
                                         <div class="room-services">
                                             <ul>
@@ -46,158 +47,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">16 DECEMBER 2019</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="pagination-content text-center">

@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import models
 
+
 class Song(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
     album = models.CharField(max_length=200, verbose_name='Альбом')
@@ -15,6 +16,7 @@ class Song(models.Model):
     class Meta:
         verbose_name = "Музыка"
         verbose_name_plural = "Музыка"
+
 
 class Concert(models.Model):
     name = models.CharField(max_length=200, verbose_name='Заголовок', blank=True)

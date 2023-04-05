@@ -7,10 +7,14 @@ class SongAdmin(admin.ModelAdmin):
 
 admin.site.register(Song, SongAdmin)
 
+
 class ConcertAdmin(admin.ModelAdmin):
     list_display = ('name', 'photo', 'date', 'location', 'price', 'is_main')
+    list_filter = ('date',)
+    search_fields = ('title', 'description')
 
 admin.site.register(Concert, ConcertAdmin)
+
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
