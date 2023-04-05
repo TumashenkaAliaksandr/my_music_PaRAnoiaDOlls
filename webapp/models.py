@@ -1,11 +1,11 @@
 from django.db import models
 
 class Song(models.Model):
-    title = models.CharField(max_length=200)
-    album = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='song_photos/', blank=True)
-    audio = models.FileField(upload_to='song_audio/')
-    is_main = models.BooleanField(default=False)
+    title = models.CharField(max_length=200, verbose_name='Заголовок')
+    album = models.CharField(max_length=200, verbose_name='Альбом')
+    photo = models.ImageField(upload_to='song_photos/', blank=True, verbose_name='Фото')
+    audio = models.FileField(upload_to='song_audio/', verbose_name='Аудио')
+    is_main = models.BooleanField(default=False, verbose_name='На главном')
 
     def __str__(self):
         return self.title
