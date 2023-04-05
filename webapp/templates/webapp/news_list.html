@@ -1,8 +1,9 @@
 {% extends 'main/base.html' %}
-
 {% load static %}
 
+
     {% block content %}
+
     <!-- breadcrumb Starts -->
     <section class="breadcrumb-outer">
         <div class="container">
@@ -17,150 +18,288 @@
             </div>
         </div>
     </section>
-    <!-- breadcrumb Ends -->
+    <!-- breadcrumb Endss -->
 
-    <!-- Gallery starts -->
-    <section class="content gallery">
+    <!-- detail starts -->
+    <section class="details">
         <div class="container">
-            <div class="gal-3-col">
-                <div class="masonry">
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery1.jpg' %}" alt="image">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="list-content">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery1.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news2.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="news-item">
+                                    <div class="news-image">
+                                        <img src="{% static 'blog/images/news3.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="news-content">
+                                        <p class="date">16 DECEMBER 2019</p>
+                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
+                                        <div class="room-services">
+                                            <ul>
+                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
+                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
+                                            </ul>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
+                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery16.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery16.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery3.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery3.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery17.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery17.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery15.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery15.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brick">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery5.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery5.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="gal-2-col">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery2.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery2.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery13.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery13.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery14.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery14.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">  
-                        <div class="gallery-item">
-                            <div class="gallery-image">
-                                <img src="{% static 'webapp/images/gallery/gallery1.jpg' %}" alt="image">
-                            </div>
-                            <div class="gallery-content">
-                                <ul>
-                                    <li><a href="{% static 'webapp/images/gallery/gallery1.jpg' %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="pagination-content text-center">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                            {% endif %}
+
+                            <span class="current-page">{{ page_obj.number }}</span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                            {% endif %}
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Gallery Ends -->
+    <!-- detail Ends -->
+
+    <!-- Back to top start -->
+    <div id="back-to-top">
+        <a href="#"></a>
+    </div>
+    <!-- Back to top ends -->
+
+    <div class="modal fade" id="login" role="dialog">
+        <div class="modal-dialog">
+            <div class="login-content">
+                <div class="login-image">
+                    <img src="{% static 'blog/images/logo-black.png' %}" alt="image">
+                </div>
+                <h3>Hello!Sign into your account</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox"> Remember Me
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+                <div class="form-btn">
+                    <a href="#" class="btn btn-orange">LOGIN</a>
+                    <p>Need an Account?<a href="#"> Create your Gautama account</a></p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="register" role="dialog">
+        <div class="modal-dialog">
+            <div class="login-content">
+                <div class="login-image">
+                    <img src="{% static 'blog/images/logo-black.png' %}" alt="image">
+                </div>
+                <h3>Awesome! Create a Gautama Account</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm password">
+                    </div>
+                </form>
+                <div class="form-btn">
+                    <a href="#" class="btn btn-orange">SIGN UP</a>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     {% endblock %}
+
+
+{#        {% if page_obj.has_previous %}#}
+{#            <a href="?page={{ page_obj.previous_page_number }}">previous</a>#}
+{#        {% endif %}#}
+{##}
+{#        <span class="current-page">{{ page_obj.number }}</span>#}
+{##}
+{#        {% if page_obj.has_next %}#}
+{#            <a href="?page={{ page_obj.next_page_number }}">next</a>#}
+{#        {% endif %}#}

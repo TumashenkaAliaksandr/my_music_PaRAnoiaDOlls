@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 class Song(models.Model):
@@ -15,12 +17,16 @@ class Song(models.Model):
         verbose_name_plural = "Музыка"
 
 class Concert(models.Model):
-    title = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='concert_photos/')
-    is_main = models.BooleanField(default=False)
+    name = models.CharField(max_length=200, verbose_name='Заголовок', blank=True)
+    photo = models.ImageField(upload_to='concert_photos/', blank=True, verbose_name='Фото')
+    location = models.CharField(max_length=200, verbose_name='Место', default='')
+    date = models.DateTimeField(verbose_name='Дата', default=datetime.now)
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Стоимость', default=0)
+    description = models.TextField(verbose_name='Описание', blank=True)
+    is_main = models.BooleanField(default=False, verbose_name='На главном')
 
     def __str__(self):
-        return self.title
+        return self.name
 
     class Meta:
         verbose_name = "Концерты"

@@ -32,5 +32,10 @@ def tests_one(request):
 
 class NewsListView(View):
     def get(self, request):
-        news = News.objects.all()
-        return render(request, 'webapp/news_list.html', {'news': news})
+        news_list = News.objects.all()
+        paginator = Paginator(news_list, 5)
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        return render(request, 'webapp/news_list.html', {'page_obj': page_obj})

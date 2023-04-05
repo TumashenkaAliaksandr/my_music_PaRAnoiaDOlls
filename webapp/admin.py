@@ -8,7 +8,7 @@ class SongAdmin(admin.ModelAdmin):
 admin.site.register(Song, SongAdmin)
 
 class ConcertAdmin(admin.ModelAdmin):
-    list_display = ('title', 'photo', 'is_main')
+    list_display = ('name', 'photo', 'date', 'location', 'price', 'is_main')
 
 admin.site.register(Concert, ConcertAdmin)
 
