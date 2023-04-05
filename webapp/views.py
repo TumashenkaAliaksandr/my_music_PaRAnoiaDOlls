@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.views import View
 
-from webapp.models import Song, Concert
+from webapp.models import Song, Concert, News
 
 
 def index(request):
@@ -28,3 +29,8 @@ def eventsdat(request):
 
 def tests_one(request):
     return render(request, 'webapp/tests.html')
+
+class NewsListView(View):
+    def get(self, request):
+        news = News.objects.all()
+        return render(request, 'news_list.html', {'news': news})

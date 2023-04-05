@@ -13,6 +13,7 @@ urlpatterns = [
     path('eventsdat/', eventsdat, name='eventsdat'),
     path('concerts/', concerts, name='concerts'),
     path('tests_one/', tests_one, name='tests_one'),
+    path('news/', NewsListView.as_view(), name='news_list'),
 
 ]
 
