@@ -21,52 +21,69 @@
     <!-- breadcrumb Endss -->
 
     <!-- detail starts -->
-    <section class="details">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="list-content">
-                        <div class="row">
-                            {% for concert in concerts %}
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="news-item">
-                                    <div class="news-image">
-                                        <img src="{% static 'blog/images/news1.jpg' %}" alt="image">
-                                    </div>
-                                    <div class="news-content">
-                                        <p class="date">{{ concert.date }}</p>
-                                        <h4>Why choose Gautama Hotel to travel this summer</h4>
-                                        <div class="room-services">
-                                            <ul>
-                                                <li><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</li>
-                                                <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</li>
-                                            </ul>
+        <section class="details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="list-content">
+                            <div class="row">
+                                {% for news in news_list %}
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="news-item">
+                                            <div class="news-image">
+                                                <img src="{{ news.photo.url }}" alt="{{ news.title }}">
+                                            </div>
+                                            <div class="news-content">
+                                                <p class="date">{{ news.pub_date }}</p>
+                                                <h4>{{ news.title }}</h4>
+                                                <div class="room-services">
+                                                    <ul>
+                                                        <li><i class="fa fa-user" aria-hidden="true"></i> By Jack
+                                                            Daniels
+                                                        </li>
+                                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 3 comments
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <p>{{ news.description }}</p>
+                                                <a href="{% url 'blog:single' news.pk %}">READ MORE <i
+                                                        class="fas fa-angle-double-right"></i></a>
+                                            </div>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                        <a href="{% url 'blog:single' %}">READ MORE <i class="fas fa-angle-double-right"></i></a>
                                     </div>
-                                </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </div>
-                    </div>
-                    <div class="pagination-content text-center">
-                        <ul class="pagination">
-                            {% if page_obj.has_previous %}
-                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                            {% endif %}
-
-                            <span class="current-page">{{ page_obj.number }}</span>
-
-                            {% if page_obj.has_next %}
-                                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                            {% endif %}
-                        </ul>
+                        <div class="pagination-content text-center">
+                            <ul class="pagination">
+                                {% if is_paginated %}
+                                    <li class="page-item{% if not page_obj.has_previous %} disabled{% endif %}">
+                                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}"
+                                                {% if not page_obj.has_previous %} tabindex="-1"{% endif %}>Previous</a>
+                                    </li>
+                                    {% for page in paginator.page_range %}
+                                        {% if page_obj.number == page %}
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">{{ page }}<span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                        {% else %}
+                                            <li class="page-item"><a class="page-link"
+                                                                     href="?page={{ page }}">{{ page }}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <li class="page-item{% if not page_obj.has_next %} disabled{% endif %}">
+                                        <a class="page-link" href="?page={{ page_obj.next_page_number }}"
+                                                {% if not page_obj.has_next %} tabindex="-1"{% endif %}>Next</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
     <!-- detail Ends -->
 
     <!-- Back to top start -->
@@ -142,14 +159,3 @@
         </div>
     </div>
     {% endblock %}
-
-
-{#        {% if page_obj.has_previous %}#}
-{#            <a href="?page={{ page_obj.previous_page_number }}">previous</a>#}
-{#        {% endif %}#}
-{##}
-{#        <span class="current-page">{{ page_obj.number }}</span>#}
-{##}
-{#        {% if page_obj.has_next %}#}
-{#            <a href="?page={{ page_obj.next_page_number }}">next</a>#}
-{#        {% endif %}#}

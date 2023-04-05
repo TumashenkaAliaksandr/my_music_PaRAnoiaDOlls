@@ -23,6 +23,7 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 </head>
 {% endblock %}
@@ -41,8 +42,8 @@
             <div class="container">
                 <div class="links links-left">
                     <ul>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> paranoiadolls@gmail.com</a></li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +375336111777</a></li>
+                        <li><a href="mailto:paranoiadolls@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> paranoiadolls@gmail.com</a></li>
+                        <li><a href="tel:+375336111777"><i class="fa fa-phone" aria-hidden="true"></i> +375336111777</a></li>
                     </ul>
                 </div>
                 <div class="links links-right pull-right">
@@ -52,7 +53,7 @@
                         <li>
                             <ul class="social-links">
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                             </ul>
@@ -80,9 +81,6 @@
                             <li {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}><a href="{% url 'webapp:about' %}" class="nav-link">Дискография</a></li>
                             <li {% if request.resolver_match.url_name == 'events' %}class="active"{% endif %}><a href="{% url 'webapp:events' %}" class="nav-link">Мерч</a></li>
                             <li {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'single' %}class="active"{% endif %}><a href="{% url 'blog:blog' %}" class="nav-link">Блог</a></li>
-{#                            <li class="dropdown submenu">#}
-{#                                <a href="cart.html" class="mt_cart"><i class="fa fa-shopping-cart"></i><span class="number-cart">1</span></a>#}
-{#                            </li>#}
                         </ul>
                         <div class="nav-btn">
                             <a href="{% url 'webapp:eventsdat' %}" class="btn btn-orange">Купить Билет</a>
@@ -115,13 +113,15 @@
         <div class="newsletter">
             <div class="container">
                 <div class="section-title title-white">
-                    <h2>Subscribe to our <span>Newsletter</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
+                    <h2>Подпишись на музыку <span>PaRAnoiaDOlls</span></h2>
+                    <p>Подпишитесь на нашу рассылку и будьте в курсе всех новостей и концертов нашей рок-группы!
+                        Получайте первыми информацию о новых релизах, будьте в курсе грядущих выступлений и получайте эксклюзивные материалы о жизни группы.
+                        Никакого спама, только рок-н-ролл!</p>
                 </div>
                 <div class="newsletter-form">
                     <form>
                         <input type="email" placeholder="Enter your email">
-                        <a href="#" class="btn btn-orange">SIGN UP</a>
+                        <a href="#" class="btn btn-orange">подписаться</a>
                     </form>
                 </div>
             </div>
@@ -132,11 +132,12 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-about">
-                                <h4>Company Info</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius tellus vitae justo blandit ultrices.</p>
+                                <h4>О группе</h4>
+                                <p>PaRAnoiaDOlls - рок-группа, основанная в Беларуси в 2010 году.
+                                    Группа исполняет альтернативный рок и считается одной из самых оригинальных и эксцентричных групп на Беларуской рок-сцене.</p>
                             </div>
                             <div class="footer-payment">
-                                <h4>We Accept</h4>
+                                <h4>Мы принимаем</h4>
                                 <ul>
                                     <li><img src="{% static 'webapp/images/icons/visa.png' %}" alt="image"></li>
                                     <li><img src="{% static 'webapp/images/icons/mastercard.png' %}" alt="image"></li>
@@ -146,42 +147,32 @@
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="quick-links">
-                                <h4>Quick Links</h4>
+                                <h4>Краткая</h4>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Rooms</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{% url 'webapp:home' %}">Главная</a></li>
+                                    <li><a href="{% url 'webapp:eventsdat' %}">Афиша</a></li>
+                                    <li><a href="{% url 'webapp:concert' %}">Концерты</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="Rooms">
-                                <h4>Rooms</h4>
+                                <h4>Информация</h4>
                                 <ul>
-                                    <li><a href="#">Single Rooms</a></li>
-                                    <li><a href="#">Double Rooms</a></li>
-                                    <li><a href="#">Studio Rooms</a></li>
-                                    <li><a href="#">Kingsize Rooms</a></li>
-                                    <li><a href="#">Presidentsuite Rooms</a></li>
-                                    <li><a href="#">Luxury Kings Rooms</a></li>
-                                    <li><a href="#">Connecting Rooms</a></li>
-                                    <li><a href="#">Murphy Rooms</a></li>
+                                    <li><a href="{% url 'webapp:about' %}">Дискография</a></li>
+                                    <li><a href="{% url 'webapp:events' %}">Мерч</a></li>
+                                    <li><a href="{% url 'blog:blog' %}">Блог</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-contact">
-                                <h4>Contact info</h4>
+                                <h4>Контакты</h4>
                                 <ul>
-                                    <li>Tel: 977-222-444-6666</li>
-                                    <li>Email: info@Gautama.com.np</li>
-                                    <li>Fax: 977-222-444-666</li>
-                                    <li>Address: 445 Mount Eden Road, Sundarbasti, Chakrapath</li>
+                                    <li>Тел: 336111777</li>
+                                    <li>Почта: paranoiadolls@gmail.com</li>
+                                    <li>Адрес: 1-ый переулок Космонавтов</li>
+                                    <li>Ракета: N13</li>
                                 </ul>
                             </div>
                         </div>
@@ -192,10 +183,10 @@
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-content text-center">
-                    <p class="white">Copyright 2019. Made with <span><a href="https://cyclonethemes.com/">Cyclone Themes</a></span>. All Rights Reserved. <a href="#">Gautama</a></p>
+                    <p class="white">Copyright 2023. Made with <span><a href="https://t.me/ultravioletpartyeyes">Phoenix Pegasus</a></span>. All Rights Reserved. <a href="#">PaRAnoiaDOlls</a></p>
                     <ul>
                         <li><a href="#" class="white"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="white"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="white"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                     </ul>
@@ -236,7 +227,7 @@
                 </div>
                 <ul class="social-links">
                     <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
@@ -270,7 +261,7 @@
                 </div>
                 <ul class="social-links">
                     <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>

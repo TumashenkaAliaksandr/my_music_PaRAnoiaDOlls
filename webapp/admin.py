@@ -15,9 +15,3 @@ class ConcertAdmin(admin.ModelAdmin):
 
 admin.site.register(Concert, ConcertAdmin)
 
-
-@admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date')
-    list_filter = ('pub_date',)
-    search_fields = ('title', 'description')

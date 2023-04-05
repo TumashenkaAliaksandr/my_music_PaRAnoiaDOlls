@@ -36,10 +36,10 @@ class Concert(models.Model):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    photo = models.ImageField(upload_to='news_photos/', null=True, blank=True)
-    pub_date = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=200, verbose_name='Заголовок')
+    description = models.TextField(verbose_name='Описание')
+    photo = models.ImageField(upload_to='news_photos/', null=True, blank=True, verbose_name='Фото')
+    pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата')
 
     def __str__(self):
         return self.title
@@ -47,3 +47,4 @@ class News(models.Model):
     class Meta:
         verbose_name = "Новости"
         verbose_name_plural = "Новости"
+
