@@ -1,13 +1,24 @@
 from django.shortcuts import render
 
+from webapp.models import Song, Concert
+
+
 def index(request):
     return render(request, 'webapp/index.html')
 
 def about(request):
-    return render(request, 'webapp/about.html')
+    songs = Song.objects.all()
+    context = {
+        'songs': songs,
+    }
+    return render(request, 'webapp/about.html', context=context)
 
-def gallery(request):
-    return render(request, 'webapp/gallery.html')
+def concerts(request):
+    concerts = Concert.objects.all()
+    context = {
+        'concerts': concerts,
+    }
+    return render(request, 'webapp/gallery.html', context=context)
 
 def events(request):
     return render(request, 'webapp/events.html')

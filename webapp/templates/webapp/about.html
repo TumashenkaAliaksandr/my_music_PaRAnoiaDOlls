@@ -18,59 +18,26 @@
     </section>
     <!-- breadcrumb Ends -->
 
-
     <!-- pd mp3 starts-->
     <section class="about-team">
         <div class="container">
+            <div class="row">
+                {% for song in songs %}
                 <div class="col-md-4">
                     <div class="team-item">
                         <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_moon.png' %}" alt="image">
+                            <img src="{{ song.photo.url }}" alt="image">
                         </div>
                         <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-2011-belaya-luna.mp3' %}"
-                                   controls></audio>
+                            <audio id="myAudio" src="{{ song.audio.url }}" controls></audio>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_dec.png' %}" alt="image">
-                        </div>
-                        <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoiadolls-december.mp3' %}"
-                                   controls></audio>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_prlove.png' %}" alt="image">
-                        </div>
-                        <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-prosili-lyubvi-ost-igrok.mp3' %}"
-                                   controls></audio>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="team-item">
-                        <div class="team-image">
-                            <img src="{% static 'webapp/images/PaRAnoiaDOlls_nark.png' %}" alt="image">
-                        </div>
-                        <div class="service-content">
-                            <audio id="myAudio" src="{% static 'webapp/audio/paranoia-dolls-narkoman.mp3' %}"
-                                   controls></audio>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
+
     <!-- pd mp3 Ends -->
 
     <!-- top concerts starts -->

@@ -1,5 +1,12 @@
 from django.contrib import admin
-from webapp.models import Song
+from .models import Song, Concert
 
-admin.site.register(Song)
+class SongAdmin(admin.ModelAdmin):
+    list_display = ('title', 'album', 'is_main')
 
+admin.site.register(Song, SongAdmin)
+
+class ConcertAdmin(admin.ModelAdmin):
+    list_display = ('title', 'photo', 'is_main')
+
+admin.site.register(Concert, ConcertAdmin)
