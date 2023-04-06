@@ -2234,29 +2234,40 @@ section.related-rooms{padding-bottom: 80px;}
 /*          Call TO Action CSS        */
 /* ======================================== */
 
-section.call-to-action{
-	background: url(../images/calltoaction.jpg) no-repeat;
-	background-position: center;
-	background-size: cover;
-	position: relative;
-  padding:85px 0 150px;
+section.call-to-action {
+    background: url(../images/calltoaction.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-.call-to-action:after{
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background: rgba(0,0,0,0.5);
-	left: 0;
-	top: 0;
+section.call-to-action:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
 }
-.call-content{
-	position: relative;
-	z-index: 1;
-  width: 70%;
-  margin: 0 auto;
+
+.call-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.call-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .call-content:before {
     content: '';
@@ -2938,10 +2949,48 @@ footer li{
 
 .copyright-content li a i:hover{color: #ffa801;}
 
+/*video baner*/
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Задаем высоту видео-баннера */
+}
+
+.video-banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 768px) {
+  .video-banner {
+    height: 300px; /* Задаем высоту видео-баннера для маленьких экранов */
+  }
+}
+
 /*footer style 1*/
 
 .footer-style-1{
-  background: url(../images/footerbg.jpg) no-repeat;
+  background: url(../videos/PaRAnoiaDOlls_Musa.mp4) no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
