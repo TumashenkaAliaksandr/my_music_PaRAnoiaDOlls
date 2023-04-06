@@ -133,35 +133,31 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-about">
                                 <h4>О группе</h4>
-                                <p>PaRAnoiaDOlls - рок-группа, основанная в Беларуси в 2010 году.
-                                    Группа исполняет альтернативный рок и считается одной из самых оригинальных и эксцентричных групп на Беларуской рок-сцене.</p>
+                                <p>PaRAnoiaDOlls - рок-группа, основанная в Беларуси в 2010 году.</p>
+                                <p>Группа исполняет альтернативный рок и считается одной из самых оригинальных
+                                    и эксцентричных групп на Беларуской рок-сцене.</p>
                             </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="quick-links">
+                                <h4>Краткая Информация</h4>
+                                <ul>
+                                    <li><a href="{% url 'webapp:home' %}">Главная</a></li>
+                                    <li><a href="{% url 'webapp:eventsdat' %}">Афиша</a></li>
+                                    <li><a href="{% url 'webapp:concert' %}">Концерты</a></li>
+                                    <li><a href="{% url 'webapp:about' %}">Дискография</a></li>
+                                    <li><a href="{% url 'webapp:events' %}">Мерч</a></li>
+                                    <li><a href="{% url 'blog:blog' %}">Блог</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-payment">
                                 <h4>Мы принимаем</h4>
                                 <ul>
                                     <li><img src="{% static 'webapp/images/icons/visa.png' %}" alt="image"></li>
                                     <li><img src="{% static 'webapp/images/icons/mastercard.png' %}" alt="image"></li>
                                     <li><img src="{% static 'webapp/images/icons/americanexpress.png' %}" alt="image"></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="quick-links">
-                                <h4>Краткая</h4>
-                                <ul>
-                                    <li><a href="{% url 'webapp:home' %}">Главная</a></li>
-                                    <li><a href="{% url 'webapp:eventsdat' %}">Афиша</a></li>
-                                    <li><a href="{% url 'webapp:concert' %}">Концерты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="Rooms">
-                                <h4>Информация</h4>
-                                <ul>
-                                    <li><a href="{% url 'webapp:about' %}">Дискография</a></li>
-                                    <li><a href="{% url 'webapp:events' %}">Мерч</a></li>
-                                    <li><a href="{% url 'blog:blog' %}">Блог</a></li>
                                 </ul>
                             </div>
                         </div>

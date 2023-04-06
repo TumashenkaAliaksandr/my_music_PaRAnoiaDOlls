@@ -48,3 +48,62 @@ class News(models.Model):
         verbose_name = "Новости"
         verbose_name_plural = "Новости"
 
+
+class Merchandise(models.Model):
+    # Название товара (строка до 100 символов)
+    name = models.CharField(max_length=100, verbose_name='Название')
+    # Описание товара (текстовое поле)
+    description = models.TextField(verbose_name='Описание')
+    # Цена товара (десятичное число с точностью до 2 знаков после запятой)
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
+    # Изображение товара (загружаемое изображение, сохраняемое в папке 'merchandise')
+    image = models.ImageField(upload_to='merchandise', verbose_name='Фотография')
+    # Размер товара (строка до 20 символов)
+    size = models.CharField(max_length=20, verbose_name='Размер')
+    # Цвет товара (строка до 20 символов)
+    color = models.CharField(max_length=20, verbose_name='Цвет')
+    # Количество товара в наличии (целое число)
+    quantity = models.IntegerField(verbose_name='Количество')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Мерч"
+        verbose_name_plural = "Мерч"
+
+
+class MerchandiseCategory(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Название')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Категория товаров'
+        verbose_name_plural = 'Категории товаров'
+
+
+class TShirt(Merchandise):
+    category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
+    type = models.CharField(max_length=20, verbose_name='Тип')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Футболка"
+        verbose_name_plural = "Футболки"
+
+
+class Cap(Merchandise):
+    category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
+    brim_type = models.CharField(max_length=50, verbose_name='Размер')
+    size_cap = models.OneToOneField(Merchandise, parent_link=True, on_delete=models.CASCADE, verbose_name='Тип козырька')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Кепка"
+        verbose_name_plural = "Кепки"

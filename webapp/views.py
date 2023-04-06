@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from django.views import View
 from django.core.paginator import Paginator
-from webapp.models import Song, Concert, News
+from webapp.models import Song, Concert, News, Merchandise, TShirt, Cap
 
 
 def index(request):
@@ -26,8 +26,13 @@ def concert(request):
 
 
 def events(request):
-    return render(request, 'webapp/events.html')
-
+    # Получаем все товары
+    merchandise = Merchandise.objects.all()
+    # Получаем все футболки
+    tshirts = TShirt.objects.all()
+    # Получаем все кепки
+    caps = Cap.objects.all()
+    return render(request, 'webapp/events.html', {'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
 
 def eventsdat(request):
     return render(request, 'webapp/events-detail.html')
