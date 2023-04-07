@@ -109,3 +109,26 @@ class Cap(Merchandise):
     class Meta:
         verbose_name = "Кепка"
         verbose_name_plural = "Кепки"
+
+
+class Sweatshirt(Merchandise):
+    category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
+    type = models.CharField(max_length=20, verbose_name='Тип')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Байка"
+        verbose_name_plural = "Байка"
+
+class Trinkets(Merchandise):
+    category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
+    type = models.CharField(max_length=20, verbose_name='Тип')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Разное"
+        verbose_name_plural = "Разное"
