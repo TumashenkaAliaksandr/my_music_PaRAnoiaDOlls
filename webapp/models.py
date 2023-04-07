@@ -38,6 +38,7 @@ class Concert(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
     description = models.TextField(verbose_name='Описание')
+    location = models.CharField(max_length=200, verbose_name='Место', default='')
     photo = models.ImageField(upload_to='news_photos/', null=True, blank=True, verbose_name='Фото')
     pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата')
 
@@ -55,7 +56,7 @@ class Merchandise(models.Model):
     # Описание товара (текстовое поле)
     description = models.TextField(verbose_name='Описание')
     # Цена товара (десятичное число с точностью до 2 знаков после запятой)
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
+    price = models.DecimalField(max_digits=10, decimal_places=0, verbose_name='Цена')
     # Изображение товара (загружаемое изображение, сохраняемое в папке 'merchandise')
     image = models.ImageField(upload_to='merchandise', verbose_name='Фотография')
     # Размер товара (строка до 20 символов)
@@ -64,6 +65,7 @@ class Merchandise(models.Model):
     color = models.CharField(max_length=20, verbose_name='Цвет')
     # Количество товара в наличии (целое число)
     quantity = models.IntegerField(verbose_name='Количество')
+    is_main = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

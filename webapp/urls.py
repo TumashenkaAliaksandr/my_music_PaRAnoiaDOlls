@@ -14,6 +14,11 @@ urlpatterns = [
     path('concert/', concert, name='concert'),
     path('tests_one/', tests_one, name='tests_one'),
 
+    path('login/', CRLoginView.as_view(), name='login'),
+    path('accounts/logout/', CRLogoutView.as_view(), name='logout'),
+    path('register/', RegisterUserView.as_view(), name='register'),
+    path('accounts/regitster/done/', RegisterDoneView.as_view(), name='register_done'),
+
 ]
 
 if settings.DEBUG:

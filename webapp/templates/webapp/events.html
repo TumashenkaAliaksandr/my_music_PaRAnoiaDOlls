@@ -26,126 +26,27 @@
         <div class="container">
             <div class="events-main1">
                 <div class="row">
+                    {% for merch in merchandise %}
                     <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
                         <div class="news-item">
                             <div class="news-image">
-                                <img src="{% static 'webapp/images/news12.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">16</span> DEC 2019</p>
+                                <img src="{{ merch.image.url }}" alt="image">
+                                <p class="dates white"><span class="white">{{ merch.price }}</span> руб.</p>
                             </div>
                             <div class="news-content">
 
-                                <h4><a href="events-detail.html">Wedding <span>Ceremony</span></a></h4>
+                                <h4><a href="events-detail.html"> <span>{{ merch.name }}</span></a></h4>
                                 <div class="meta mar-bottom-15">
                                     <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
+                                            class="fas fa-ruler"></i>{{ merch.size }}</span>
+                                    <span class="location"> <i class="fas fa-palette"></i>{{ merch.color }}</span>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
+                                <p>{{ merch.description }}</p>
                                 <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="{% static 'webapp/images/news13.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">21</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-
-                                <h4><a href="events-detail.html"><span>New Year</span> Party</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 mar-bottom-30">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="{% static 'webapp/images/news14.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">25</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-
-                                <h4><a href="events-detail.html">Hotel <span>Autumn</span> 2020</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="{% static 'webapp/images/news10.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">16</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-
-                                <h4><a href="events-detail.html"><span>BBQ</span> and Beer</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="{% static 'webapp/images/news11.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">21</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-
-                                <h4><a href="events-detail.html"><span>Pool</span> Party</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="{% static 'webapp/images/news9.jpg' %}" alt="image">
-                                <p class="dates white"><span class="white">25</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-
-                                <h4><a href="events-detail.html">Music <span>Party</span></a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i
-                                            class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla,
-                                    fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="events-detail.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                     <div class="col-xs-12">
                         <div class="pagination-content text-center mar-top-30">
                             <ul class="pagination">

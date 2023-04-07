@@ -48,8 +48,19 @@
                 </div>
                 <div class="links links-right pull-right">
                     <ul>
-                        <li><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#register"><i class="fa fa-pen" aria-hidden="true"></i> Register</a></li>
+                        {% if user.is_authenticated %}
+                            <li style="color: gold">{{ user.username }}</li>
+                            <li {% if request.resolver_match.url_name == 'logout' %}class="active"{% endif %}><a
+                                    href="{% url 'webapp:logout' %}" class="nav-link">Logout</a></li>
+                        {% else %}
+                            <li {% if request.resolver_match.url_name == 'login' %}class="active"{% endif %}><a
+                                    href="{% url 'webapp:login' %}" data-toggle="modal"><i
+                                    class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                            <li {% if request.resolver_match.url_name == 'register' or request.resolver_match.url_name == 'register_done' %}class="active"{% endif %}>
+                                <a href="{% url 'webapp:register' %}" data-toggle="modal"><i class="fa fa-pen"
+                                                                                             aria-hidden="true"></i>
+                                    Register</a></li>
+                        {% endif %}
                         <li>
                             <ul class="social-links">
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
@@ -69,7 +80,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <a class="navbar-brand" href="{% url 'webapp:home' %}">
-                            <img alt="logo1" src="{% static 'webapp/images/pdlogo1.png' %}" class="logo-black">
+                            <img alt="logo1" src="{% static 'webapp/images/pd_logo2.png' %}" class="logo-black">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -198,72 +209,72 @@
     </div>
     <!-- Back to top ends -->
 
-    <div class="modal fade" id="login" role="dialog">
-        <div class="modal-dialog">
-            <div class="login-content">
-                <div class="login-image">
-                    <img src="{% static 'webapp/images/pdlogo1.png' %}" alt="image">
-                </div>
-                <h3>Войти в аккаунт</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="email" placeholder="Введите почту">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Введите пароль">
-                    </div>
-                    <div class="form-group form-checkbox">
-                        <input type="checkbox"> Запомнить меня
-                        <a href="#">Забыли пароль?</a>
-                    </div>
-                </form>
-                <div class="form-btn">
-                    <a href="#" class="btn btn-orange">Войти</a>
-                    <p>Нужен аккаунт?<a href="#"> Создайте свой аккаунт PaRAnoiaDOlls</a></p>
-                </div>
-                <ul class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+{#    <div class="modal fade" id="login" role="dialog">#}
+{#        <div class="modal-dialog">#}
+{#            <div class="login-content">#}
+{#                <div class="login-image">#}
+{#                    <img src="{% static 'webapp/images/pdlogo1.png' %}" alt="image">#}
+{#                </div>#}
+{#                <h3>Войти в аккаунт</h3>#}
+{#                <form>#}
+{#                    <div class="form-group">#}
+{#                        <input type="email" placeholder="Введите почту">#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <input type="password" placeholder="Введите пароль">#}
+{#                    </div>#}
+{#                    <div class="form-group form-checkbox">#}
+{#                        <input type="checkbox"> Запомнить меня#}
+{#                        <a href="#">Забыли пароль?</a>#}
+{#                    </div>#}
+{#                </form>#}
+{#                <div class="form-btn">#}
+{#                    <a href="{% url 'login' %}" class="btn btn-orange">Войти</a>#}
+{#                    <p>Нужен аккаунт?<a href="#"> Создайте свой аккаунт PaRAnoiaDOlls</a></p>#}
+{#                </div>#}
+{#                <ul class="social-links">#}
+{#                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
-    <div class="modal fade" id="register" role="dialog">
-        <div class="modal-dialog">
-            <div class="login-content">
-                <div class="login-image">
-                    <img src="{% static 'webapp/images/pdlogo1.png' %}" alt="image">
-                </div>
-                <h3>Потрясающе! Создайте учетную запись PaRAnoiaDOlls</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Имя">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Ваша почта">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Пароль">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Повторите пароль">
-                    </div>
-                </form>
-                <div class="form-btn">
-                    <a href="#" class="btn btn-orange">Подписаться</a>
-                </div>
-                <ul class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+{#    <div class="modal fade" id="register" role="dialog">#}
+{#        <div class="modal-dialog">#}
+{#            <div class="login-content">#}
+{#                <div class="login-image">#}
+{#                    <img src="{% static 'webapp/images/pdlogo1.png' %}" alt="image">#}
+{#                </div>#}
+{#                <h3>Потрясающе! Создайте учетную запись PaRAnoiaDOlls</h3>#}
+{#                <form>#}
+{#                    <div class="form-group">#}
+{#                        <input type="text" placeholder="Имя">#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <input type="email" placeholder="Ваша почта">#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <input type="password" placeholder="Пароль">#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <input type="password" placeholder="Повторите пароль">#}
+{#                    </div>#}
+{#                </form>#}
+{#                <div class="form-btn">#}
+{#                    <a href="{% url 'register' %}" class="btn btn-orange">Подписаться</a>#}
+{#                </div>#}
+{#                <ul class="social-links">#}
+{#                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>#}
+{#                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
     <!-- *Scripts* -->
     <script src="{% static 'webapp/js/jquery-3.3.1.min.js' %}"></script>

@@ -11,24 +11,20 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd15.jpg' %})">
                         <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">Tour Dates and Tickets</h3>#}
                             <h1 data-animation="animated fadeInUp">Даты  <span>Концерты</span> Билеты</h1>
                             <a href="{% url 'webapp:eventsdat' %}" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
                         </div>
                     </div>
                     <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd3.jpg' %})">
                         <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">The lap of Luxury</h3>#}
                             <h1 data-animation="animated fadeInUp">PaRAnoia <span>News</span></h1>
                             <a href="{% url 'blog:blog' %}" data-animation="animated fadeInUp" class="slider-btn btn-or">Перейти</a>
                         </div>
                     </div>
                     <div class="swiper-slide" style="background-image:url({% static 'webapp/images/slider/pd4.jpg' %})">
                         <div class="swiper-content">
-{#                            <h3 data-animation="animated fadeInUp">As We Like to Keep It That Way</h3>#}
                             <h1 data-animation="animated fadeInUp">Успевай <span>Распродажа</span> 60-80%</h1>
                             <a href="{% url 'webapp:events' %}" data-animation="animated fadeInUp" class="slider-btn btn-or mar-right-10">Заказать</a>
-{#                            <a href="#" data-animation="animated fadeInUp" class="slider-btn btn-wt">Заказать</a>#}
                         </div>
                     </div>
                 </div>
@@ -321,136 +317,41 @@
                                 Кроме того, у вас есть возможность приобрести брелки, которые можно использовать для
                                 ключей или рюкзака,
                                 а также значки, которые отлично дополнят вашу коллекцию.<br><br></p>
-                            <a href="#" class="btn btn-black mar-top-30">В магаз</a>
+                            <a href="{% url 'webapp:events' %}" class="btn btn-black mar-top-30">В магаз</a>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="room-outer">
                             <div class="row room-slider">
-                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                    <div class="room-item">
-                                        <div class="room-image">
-                                            <img src="{% static 'webapp/images/room-b1.jpg' %}" alt="image">
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                        </div>
-                                        <div class="room-content">
-                                            <div class="room-title">
-                                                <h4>Super Deluxe</h4>
-                                                <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                                <div class="deal-rating">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
+                                {% for main_merch in merch %}
+                                    <div class="col-md-4 col-sm-6 col-xs-6">
+                                        <div class="room-item">
+                                            <div class="room-image">
+                                                <img src="{{ main_merch.image.url }}" alt="image"
+                                                     style="width: 300px; height: 300px;">
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                            <div class="room-content">
+                                                <div class="room-title">
+                                                    <h4>{{ main_merch.name }}</h4>
+                                                    <p class="price-ft">{{ main_merch.price }} <span>/ рублей</span></p>
                                                 </div>
-                                            </div>
-                                            <div class="room-services mar-bottom-15">
-                                                <ul>
-                                                    <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                    <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="room-btns mar-top-20">
-                                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                                <a href="#" class="btn btn-orange">BOOK NOW</a>
+                                                <div class="room-services mar-bottom-15">
+                                                    <ul>
+                                                        <li><i class="fa fa-ruler"
+                                                               aria-hidden="true"></i>{{ main_merch.size }}</li>
+                                                        <li><i class="fa fa-palette"
+                                                               aria-hidden="true"></i>{{ main_merch.color }}</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="room-btns mar-top-20">
+                                                    <a href="#" class="btn btn-black mar-right-10">посмотреть</a>
+                                                    <a href="#" class="btn btn-orange">купить сейчас</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                    <div class="room-item">
-                                        <div class="room-image">
-                                            <img src="{% static 'webapp/images/room-b2.jpg' %}" alt="image">
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                        </div>
-                                        <div class="room-content">
-                                            <div class="room-title">
-                                                <h4>Junior Suite</h4>
-                                                <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                                <div class="deal-rating">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                </div>
-                                            </div>
-                                            <div class="room-services mar-bottom-15">
-                                                <ul>
-                                                    <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                    <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="room-btns mar-top-20">
-                                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <div class="room-item">
-                                        <div class="room-image">
-                                            <img src="{% static 'webapp/images/room-b3.jpg' %}" alt="image">
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                        </div>
-                                        <div class="room-content">
-                                            <div class="room-title">
-                                                <h4>Executive Suite</h4>
-                                                <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                                <div class="deal-rating">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                </div>
-                                            </div>
-                                            <div class="room-services mar-bottom-15">
-                                                <ul>
-                                                    <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                    <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="room-btns mar-top-20">
-                                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                    <div class="room-item">
-                                        <div class="room-image">
-                                            <img src="{% static 'webapp/images/room-b4.jpg' %}" alt="image">
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                        </div>
-                                        <div class="room-content">
-                                            <div class="room-title">
-                                                <h4>Royal Deluxe</h4>
-                                                <p class="price-ft">$2010 <span>/ per Night</span></p>
-                                                <div class="deal-rating">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                </div>
-                                            </div>
-                                            <div class="room-services mar-bottom-15">
-                                                <ul>
-                                                    <li><i class="fa fa-bed" aria-hidden="true"></i> 3 Bedrooms</li>
-                                                    <li><i class="fa fa-wifi" aria-hidden="true"></i> Wifi</li>
-                                                </ul>
-                                            </div>
-                                            <div class="room-btns mar-top-20">
-                                                <a href="#" class="btn btn-black mar-right-10">VIEW DETAILS</a>
-                                                <a href="#" class="btn btn-orange">BOOK NOW</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

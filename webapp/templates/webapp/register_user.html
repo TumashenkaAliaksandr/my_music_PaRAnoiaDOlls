@@ -1,0 +1,56 @@
+{% extends "main/base.html" %}
+
+{% load bootstrap4 %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+
+    <div class="modal fade" id="login" role="dialog">
+        <div class="modal-dialog">
+            <div class="login-content">
+                <div class="login-image">
+                    <img src="/webapp/images/pdlogo1.png" alt="image">
+                </div>
+                <h3>Потрясающе! Создайте учетную запись PaRAnoiaDOlls</h3>
+                <h3>Войти в аккаунт</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Введите почту">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Введите пароль">
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox"> Запомнить меня
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                </form>
+                <div class="form-btn">
+                    <a href="{% url 'webapp:login' %}" class="btn btn-orange">Войти</a>
+                    <p>Нужен аккаунт?<a href="#"> Создайте свой аккаунт PaRAnoiaDOlls</a></p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="site-section" style="overflow: hidden">
+        <div class="container">
+            <h2>Registering a new user</h2>
+            <form method="post">
+                {% csrf_token %}
+                {% bootstrap_form form layout='horizontal' %}
+                {% buttons submit='Register' %}{% endbuttons %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
