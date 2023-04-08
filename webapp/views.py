@@ -12,9 +12,12 @@ from webapp.forms import RegisterUserForm
 def index(request):
     merch = Merchandise.objects.all()
     main_merch = Merchandise.objects.filter(is_main=True).first()
+    main_concerts = Concert.objects.all()
+
     context = {
         'merch': merch,
         'main_merch': main_merch,
+        'main_concerts': main_concerts,
     }
     return render(request, 'webapp/index.html', context=context)
 
@@ -30,18 +33,17 @@ def about(request):
 
 def concert(request):
     concerts = Concert.objects.all()
+    main_concerts = Concert.objects.filter(is_main=True).first()
     context = {
         'concerts': concerts,
+
     }
     return render(request, 'webapp/gallery.html', context=context)
 
 
 def events(request):
-    # Получаем все товары
     merchandise = Merchandise.objects.all()
-    # Получаем все футболки
     tshirts = TShirt.objects.all()
-    # Получаем все кепки
     caps = Cap.objects.all()
     return render(request, 'webapp/events.html', {'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
 

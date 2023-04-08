@@ -15,9 +15,6 @@ class ConcertAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')
 
 
-admin.site.register(Concert, ConcertAdmin)
-
-
 class MerchandiseAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'price', 'quantity')
 
@@ -44,3 +41,4 @@ admin.site.register(Cap, CapAdmin)
 admin.site.register(Sweatshirt, SweatshirtAdmin)
 admin.site.register(MerchandiseCategory)
 admin.site.register(Trinkets, TrinketsAdmin)
+admin.site.register(Concert, ConcertAdmin)
