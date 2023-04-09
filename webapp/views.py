@@ -23,17 +23,18 @@ def index(request):
 
 
 
-def about(request):
+def music_about(request):
     songs = Song.objects.all()
+    main_concerts = Concert.objects.all()
     context = {
         'songs': songs,
+        'main_concerts': main_concerts,
     }
-    return render(request, 'webapp/about.html', context=context)
+    return render(request, 'webapp/music.html', context=context)
 
 
 def concert(request):
     concerts = Concert.objects.all()
-    main_concerts = Concert.objects.filter(is_main=True).first()
     context = {
         'concerts': concerts,
 

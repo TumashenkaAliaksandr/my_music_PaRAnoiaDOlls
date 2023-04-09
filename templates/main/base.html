@@ -89,7 +89,7 @@
                             <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}><a href="{% url 'webapp:home' %}" class="nav-link">О группе</a></li>
                             <li {% if request.resolver_match.url_name == 'eventsdat' %}class="active"{% endif %}><a href="{% url 'webapp:eventsdat' %}" class="nav-link">Афиша</a></li>
                             <li {% if request.resolver_match.url_name == 'concert' %}class="active"{% endif %}><a href="{% url 'webapp:concert' %}" class="nav-link">Концерты</a></li>
-                            <li {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}><a href="{% url 'webapp:about' %}" class="nav-link">Дискография</a></li>
+                            <li {% if request.resolver_match.url_name == 'music' %}class="active"{% endif %}><a href="{% url 'webapp:music' %}" class="nav-link">Дискография</a></li>
                             <li {% if request.resolver_match.url_name == 'events' %}class="active"{% endif %}><a href="{% url 'webapp:events' %}" class="nav-link">Мерч</a></li>
                             <li {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'single' %}class="active"{% endif %}><a href="{% url 'blog:blog' %}" class="nav-link">Блог</a></li>
                         </ul>
@@ -156,7 +156,7 @@
                                     <li><a href="{% url 'webapp:home' %}">Главная</a></li>
                                     <li><a href="{% url 'webapp:eventsdat' %}">Афиша</a></li>
                                     <li><a href="{% url 'webapp:concert' %}">Концерты</a></li>
-                                    <li><a href="{% url 'webapp:about' %}">Дискография</a></li>
+                                    <li><a href="{% url 'webapp:music' %}">Дискография</a></li>
                                     <li><a href="{% url 'webapp:events' %}">Мерч</a></li>
                                     <li><a href="{% url 'blog:blog' %}">Блог</a></li>
                                 </ul>
@@ -176,9 +176,12 @@
                             <div class="footer-contact">
                                 <h4>Контакты</h4>
                                 <ul>
-                                    <li>Тел: 336111777</li>
-                                    <li>Почта: paranoiadolls@gmail.com</li>
-                                    <li>Адрес: 1-ый переулок Космонавтов</li>
+                                    <li><a href="mailto:paranoiadolls@gmail.com"><i class="fa fa-envelope"
+                                                                                    aria-hidden="true"></i>
+                                        paranoiadolls@gmail.com</a></li>
+                                    <li><a href="tel:+375336111777"><i class="fa fa-phone" aria-hidden="true"></i>
+                                        +375336111777</a></li>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: 1-ый переулок Космонавтов</li>
                                     <li>Ракета: N13</li>
                                 </ul>
                             </div>

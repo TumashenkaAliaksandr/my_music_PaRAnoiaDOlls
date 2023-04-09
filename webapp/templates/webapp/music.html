@@ -54,54 +54,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="top-hotels-ii">
-                        <img src="{% static 'webapp/images/aphisha8.jpg' %}" alt="hotel-image">
-                        <h4>Три Шурупа</h4>
-                        <div class="pp-details yellow">
-                            <span class="pull-left">Гродно</span>
-                            <span class="pp-tour-ar">
+                {% for concert in main_concerts %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="top-hotels-ii">
+                            <img src="{{ concert.photo.url }}" alt="hotel-image">
+                            <h4>{{ concert.name }}</h4>
+                            <div class="pp-details yellow">
+                                <span class="pull-left">{{ concert.location }}</span>
+                                <span class="pp-tour-ar">
                                 <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
                             </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="top-hotels-ii">
-                        <img src="{% static 'webapp/images/aphisha2.jpg' %}" alt="hotel-image">
-                        <h4>Exit</h4>
-                        <div class="pp-details yellow">
-                            <span class="pull-left">XX век</span>
-                            <span class="pp-tour-ar">
-                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="top-hotels-ii">
-                        <img src="{% static 'webapp/images/aphisha7.jpg' %}" alt="hotel-image">
-                        <h4>Полоцк</h4>
-                        <div class="pp-details yellow">
-                            <span class="pull-left">Клуб Сфера</span>
-                            <span class="pp-tour-ar">
-                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="top-hotels-ii">
-                        <img src="{% static 'webapp/images/aphisha4.jpg' %}" alt="hotel-image">
-                        <h4>Реактор</h4>
-                        <div class="pp-details yellow">
-                            <span class="pull-left">Минск</span>
-                            <span class="pp-tour-ar">
-                                <a href="#"><i class="fa fa-angle-right pad-0"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

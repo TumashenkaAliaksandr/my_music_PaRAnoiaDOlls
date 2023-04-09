@@ -73,7 +73,7 @@ class Merchandise(models.Model):
 
 
 class MerchandiseCategory(models.Model):
-    """category model"""
+    """Category model"""
     name = models.CharField(max_length=50, verbose_name='Название')
 
     def __str__(self):
@@ -85,7 +85,7 @@ class MerchandiseCategory(models.Model):
 
 
 class TShirt(Merchandise):
-    """products t-shirt"""
+    """Products t-shirt"""
     category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
     type = models.CharField(max_length=20, verbose_name='Тип')
 
@@ -123,8 +123,9 @@ class Sweatshirt(Merchandise):
         verbose_name = "Байка"
         verbose_name_plural = "Байка"
 
+
 class Trinkets(Merchandise):
-    """model trinkets"""
+    """Model trinkets"""
     category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
     type = models.CharField(max_length=20, verbose_name='Тип')
 

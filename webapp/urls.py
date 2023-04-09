@@ -8,7 +8,7 @@ app_name = 'webapp'
 
 urlpatterns = [
     path('', index, name='home'),
-    path('about/', about, name='about'),
+    path('music/', music_about, name='music'),
     path('events/', events, name='events'),
     path('eventsdat/', eventsdat, name='eventsdat'),
     path('concert/', concert, name='concert'),
