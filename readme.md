@@ -1,7 +1,7 @@
 <h1 align="center">Привет это сайт рок группы <a href="https://paranoiadolls.com" target="_blank">PaRAnoaDOlls</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Сайт состоит из следующих страниц:)](https://git.io/typing-svg)
+*Сайт состоит из следующих страниц:*
 ***
     1. О группе - здесь вы можете найти информацию о группе и их музыке, а также увидеть фотографии и видео с прошлых концертов.
     2. Афиша - здесь вы можете узнать о предстоящих концертах группы, их стоимости и покупке билета.
@@ -89,7 +89,6 @@
 
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=У каждого+лета+своя+история!)](https://git.io/typing-svg)
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=PaRAnoiaDOlls.)](https://git.io/typing-svg)
 
 *Copyright 2023. Made with Phoenix Pegasus. All Rights Reserved. PaRAnoiaDOlls*
