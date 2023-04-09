@@ -22,7 +22,6 @@ def index(request):
     return render(request, 'webapp/index.html', context=context)
 
 
-
 def music_about(request):
     songs = Song.objects.all()
     main_concerts = Concert.objects.all()
@@ -47,6 +46,7 @@ def events(request):
     tshirts = TShirt.objects.all()
     caps = Cap.objects.all()
     return render(request, 'webapp/events.html', {'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
+
 
 def eventsdat(request):
     return render(request, 'webapp/events-detail.html')
@@ -78,6 +78,7 @@ class NewsListView(ListView):
 class CRLoginView(LoginView):
     template_name = 'webapp/login.html'
     redirect_authenticated_user = True
+
 
 class CRLogoutView(LoginRequiredMixin, LogoutView):
     template_name = 'webapp/logout.html'

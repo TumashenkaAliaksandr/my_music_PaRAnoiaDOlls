@@ -101,7 +101,8 @@ class Cap(Merchandise):
     """Model Cap"""
     category = models.ForeignKey(MerchandiseCategory, on_delete=models.CASCADE, verbose_name='Категория')
     brim_type = models.CharField(max_length=50, verbose_name='Размер')
-    size_cap = models.OneToOneField(Merchandise, parent_link=True, on_delete=models.CASCADE, verbose_name='Тип козырька')
+    size_cap = models.OneToOneField(Merchandise, parent_link=True,
+                                    on_delete=models.CASCADE, verbose_name='Тип козырька')
 
     def __str__(self):
         return self.name
