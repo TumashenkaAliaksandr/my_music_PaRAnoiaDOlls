@@ -10,6 +10,7 @@ from webapp.forms import RegisterUserForm
 
 
 def index(request):
+    """Main, about band"""
     merch = Merchandise.objects.all()
     main_merch = Merchandise.objects.filter(is_main=True).first()
     main_concerts = Concert.objects.all()
