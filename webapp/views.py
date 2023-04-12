@@ -24,6 +24,7 @@ def index(request):
 
 
 def music_about(request):
+    """Views name: Band Songs"""
     songs = Song.objects.all()
     main_concerts = Concert.objects.all()
     context = {
@@ -34,6 +35,7 @@ def music_about(request):
 
 
 def concert(request):
+    """Views name: Band Concert"""
     concerts = Concert.objects.all()
     context = {
         'concerts': concerts,
@@ -43,6 +45,7 @@ def concert(request):
 
 
 def events(request):
+    """Views name: Band Merch"""
     merchandise = Merchandise.objects.all()
     tshirts = TShirt.objects.all()
     caps = Cap.objects.all()
@@ -50,14 +53,17 @@ def events(request):
 
 
 def eventsdat(request):
+    """these are views for booking the event"""
     return render(request, 'webapp/events-detail.html')
 
 
 def tests_one(request):
+    """this is views for tests"""
     return render(request, 'webapp/tests.html')
 
 
 class NewsListView(ListView):
+    """these are views for News list"""
     model = News
     template_name = 'blog/news_list.html'
     context_object_name = 'news_list'
@@ -65,6 +71,7 @@ class NewsListView(ListView):
     ordering = ['-pub_date']
 
     def get_context_data(self, **kwargs):
+        """for paginations"""
         context = super().get_context_data(**kwargs)
         paginator = context['paginator']
         page_numbers_range = 5
@@ -77,15 +84,18 @@ class NewsListView(ListView):
 
 
 class CRLoginView(LoginView):
+    """create login"""
     template_name = 'webapp/login.html'
     redirect_authenticated_user = True
 
 
 class CRLogoutView(LoginRequiredMixin, LogoutView):
+    """logout views"""
     template_name = 'webapp/logout.html'
 
 
 class RegisterUserView(CreateView):
+    """Registration"""
     model = User
     template_name = 'webapp/register_user.html'
     form_class = RegisterUserForm
@@ -93,4 +103,5 @@ class RegisterUserView(CreateView):
 
 
 class RegisterDoneView(TemplateView):
+    """Confirmation of registration"""
     template_name = 'webapp/register_done.html'
