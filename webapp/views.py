@@ -47,9 +47,12 @@ def concert(request):
 def events(request):
     """Views name: Band Merch"""
     merchandise = Merchandise.objects.all()
+    paginator = Paginator(merchandise, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     tshirts = TShirt.objects.all()
     caps = Cap.objects.all()
-    return render(request, 'webapp/events.html', {'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
+    return render(request, 'webapp/events.html', {'page_obj': page_obj, 'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
 
 
 def eventsdat(request):
@@ -70,17 +73,17 @@ class NewsListView(ListView):
     paginate_by = 5
     ordering = ['-pub_date']
 
-    def get_context_data(self, **kwargs):
-        """for paginations"""
-        context = super().get_context_data(**kwargs)
-        paginator = context['paginator']
-        page_numbers_range = 5
-        max_index = len(paginator.page_range)
-        current_page = context['page_obj'].number
-        start_index = current_page - page_numbers_range if current_page > page_numbers_range else 0
-        end_index = current_page + page_numbers_range if current_page < max_index - page_numbers_range else max_index
-        context['page_range'] = list(paginator.page_range[start_index:end_index])
-        return context
+    # def get_context_data(self, **kwargs):
+    #     """for paginations"""
+    #     context = super().get_context_data(**kwargs)
+    #     paginator = context['paginator']
+    #     page_numbers_range = 5
+    #     max_index = len(paginator.page_range)
+    #     current_page = context['page_obj'].number
+    #     start_index = current_page - page_numbers_range if current_page > page_numbers_range else 0
+    #     end_index = current_page + page_numbers_range if current_page < max_index - page_numbers_range else max_index
+    #     context['page_range'] = list(paginator.page_range[start_index:end_index])
+    #     return context
 
 
 class CRLoginView(LoginView):
