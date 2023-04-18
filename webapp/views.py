@@ -52,7 +52,13 @@ def events(request):
     page_obj = paginator.get_page(page_number)
     tshirts = TShirt.objects.all()
     caps = Cap.objects.all()
-    return render(request, 'webapp/events.html', {'page_obj': page_obj, 'merchandise': merchandise, 'tshirts': tshirts, 'caps': caps})
+    context = {
+        'page_obj': page_obj,
+        'merchandise': merchandise,
+        'tshirts': tshirts,
+        'caps': caps,
+    }
+    return render(request, 'webapp/events.html', context)
 
 
 def eventsdat(request):
