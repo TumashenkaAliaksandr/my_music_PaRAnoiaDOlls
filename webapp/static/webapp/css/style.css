@@ -1004,7 +1004,7 @@ header{
 }
 .header-content{
 	border-bottom: 1px solid #fff3;
-  background: #004d85;
+  background: #648bff;
 }
 .header-content li{
 	display: inline-block;
@@ -2951,9 +2951,13 @@ footer li{
 
 /*video baner*/
 .video-banner {
+  background: url(../images/party_crowd_on_bokeh_lights_background_2107.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
   width: 100%;
   height: 500px; /* Задаем высоту видео-баннера */
+  background-attachment: fixed;
 }
 
 .video-banner video {
@@ -4903,7 +4907,8 @@ section.testimonial{
 /* ======================================== */
 
 section.gallery{
-    padding-bottom: 70px;
+  position: relative;
+  width: 100%;
 }
 .gallery .mt_filter .list-inline{
     border: none;

@@ -1,6 +1,7 @@
 <h1 align="center">Привет это сайт рок группы <a href="https://paranoiadolls.com" target="_blank">PaRAnoaDOlls</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
+
 *Сайт состоит из следующих страниц:*
 ***
     1. О группе - здесь вы можете найти информацию о группе и их музыке, а также увидеть фотографии и видео с прошлых концертов.
@@ -16,7 +17,7 @@
 [![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Сайт+был+разработан+с+помощью:)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Сайт+был+разработан+с+помощью:)](https://github.com/TumashenkaAliaksandr)
 
 ***
     asgiref==3.6.0
@@ -34,6 +35,9 @@
     sqlparse==0.4.3
     tzdata==2023.3
 ***
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
+
 *Asgiref - это библиотека, которая предоставляет серверную асинхронность для Python, необходимую для работы Django 3.0 и выше.*
 
 *BeautifulSoup4 - это библиотека для парсинга HTML и XML документов, которая используется для обработки данных с других сайтов.*
@@ -89,7 +93,7 @@
 **Обратите внимание, что эти шаги могут отличаться в зависимости от вашего проекта и требований ПО. Всегда читайте документацию по установке и настройке вашего ПО на сервере.**
 
 
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=PaRAnoiaDOlls.)](https://git.io/typing-svg)
+![YouTube Music](https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=PaRAnoiaDOlls.)](https://github.com/TumashenkaAliaksandr)
 
 *Copyright 2023. Made with Phoenix Pegasus. All Rights Reserved. PaRAnoiaDOlls*

@@ -57,10 +57,11 @@
                                     href="{% url 'webapp:login' %}" data-toggle="modal"><i
                                     class="fa fa-user" aria-hidden="true"></i> Login</a></li>
                             <li {% if request.resolver_match.url_name == 'register' or request.resolver_match.url_name == 'register_done' %}class="active"{% endif %}>
-                                <a href="{% url 'webapp:register' %}" data-toggle="modal"><i class="fa fa-pen"
-                                                                                             aria-hidden="true"></i>
+                                <a href="{% url 'webapp:register' %}"><i class="fa fa-pen"
+                                                                         aria-hidden="true"></i>
                                     Register</a></li>
                         {% endif %}
+
                         <li>
                             <ul class="social-links">
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
@@ -279,6 +280,33 @@
 {#            </div>#}
 {#        </div>#}
 {#    </div>#}
+
+
+
+    <!-- Forgot Password -->
+    <section class="forgot-password">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="fp-content">
+                        <p class="bold">Please provide your email address. Click in the provided link to retrieve you account.</p>
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <label>Enter Email Address</label>
+                                    <input type="email" class="form-control" id="Name" placeholder="Enter username or email id">
+                                </div>
+                                <div class="col-xs-12">
+                                    <a href="#" class="btn btn-orange">Reset Password</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Forgot Password Ends -->
 
 
     <!-- *Scripts* -->
