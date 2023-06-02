@@ -3,6 +3,7 @@
 <div style="text-align:center">
   <img src="https://media.giphy.com/media/3o7btS6CdcnTBHLX0Y/giphy.gif" height="220" />
 </div>
+
 *Сайт состоит из следующих страниц:*
 ***
     1. О группе - здесь вы можете найти информацию о группе и их музыке, а также увидеть фотографии и видео с прошлых концертов.
