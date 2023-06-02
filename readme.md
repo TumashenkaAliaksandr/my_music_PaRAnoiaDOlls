@@ -1,6 +1,8 @@
 <h1 align="center">Привет это сайт рок группы <a href="https://paranoiadolls.com" target="_blank">PaRAnoaDOlls</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<img src="https://media.giphy.com/media/3o7btS6CdcnTBHLX0Y/giphy.gif" height="220"/>
+<div style="text-align:center">
+  <img src="https://media.giphy.com/media/3o7btS6CdcnTBHLX0Y/giphy.gif" height="220" />
+</div>
 
 *Сайт состоит из следующих страниц:*
 ***
