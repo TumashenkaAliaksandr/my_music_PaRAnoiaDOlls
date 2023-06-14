@@ -100,7 +100,8 @@ class CRLoginView(LoginView):
 
 class CRLogoutView(LoginRequiredMixin, LogoutView):
     """logout views"""
-    template_name = 'webapp/logout.html'
+    template_name = 'webapp/index.html'
+    next_page = reverse_lazy('webapp:home')
 
 
 class RegisterUserView(CreateView):

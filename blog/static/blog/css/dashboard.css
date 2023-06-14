@@ -1105,7 +1105,7 @@ a.button.border { font-weight:500; }
 
 .icon-box-2 p {
 	margin-top: 20px;
-	font-style: 16px;
+	font-size: 16px;
 }
 
 .icon-box-2 i.im-icon-Mail-withAtSign {font-size: 58px; top: 2px;}
@@ -1443,7 +1443,6 @@ mark { border-radius: 4px; }
     line-height: 40px;
 }
 
-/
 
 /* ---------------------------------- */
 /* Info Box
@@ -1893,7 +1892,7 @@ mark { border-radius: 4px; }
 .stytle-5 .tabs-container .widget-text {
 	position: relative;
 	top: 50px;
-	transform: transitionY(-50%);
+	transform: translateY(-50%);
 	display: inline-block;
 }
 
@@ -2681,7 +2680,7 @@ span.like-icon {
 	z-index: 101;
 	right: 30px;
 	bottom: 30px;
-	cursor: normal;
+	cursor: auto;
 	background-color: rgba(24,24,24,0.4);
 	display: block;
 	height: 44px;
@@ -3921,9 +3920,9 @@ a.close-list-item {
 .history a.dropdown-item.del {color:#F44336;}
 
 @media(max-width: 767px){
-	.history .textright{text-align: left;}
-
-	.dashboard-list-box .button.gray{margin-top: 6px: }
+	.history .textright{text-align: left;
+	}
+	.dashboard-list-box .button.gray{margin-top: 6px; }
 }
 
 /* ------------------------------------------------------------------- */

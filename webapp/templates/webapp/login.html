@@ -5,20 +5,46 @@
 
 {% block content %}
 
-    <div class="site-section" style="overflow: hidden">
+
+    <!-- breadcrumb Starts -->
+    <section class="breadcrumb-outer">
         <div class="container">
-            <h2>Enter</h2>
+            <div class="breadcrumb-content">
+                <h2>Вход</h2>
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'webapp:home' %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">На главную</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb Ends -->
+
+
+
+    <div class="site-section" style="overflow: hidden">
+        <div class="container" style="max-width: 600px; margin: 0 auto; padding: 30px;">
+            <h4 class="text-center">Привет! Заполни форму что бы войти.</h4>
             {% if user.is_authenticated %}
                 <p>You are already signed in.</p>
             {% else %}
                 <form method="post">
                     {% csrf_token %}
-                    {% bootstrap_form form layout='horizontal' %}
+                    {% bootstrap_form form layout='centre' %}
                     <input type="hidden" name="next">
-                    {% buttons submit='Sign in' %}{% endbuttons %}
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox"> Remember Me
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    {% buttons %}
+                        <button type="submit" class="btn btn-warning text-light btn-block">Sign in</button>
+                    {% endbuttons %}
                 </form>
-                <p><a href="#">Reset password</a></p>
             {% endif %}
         </div>
     </div>
+
+
 {% endblock %}
