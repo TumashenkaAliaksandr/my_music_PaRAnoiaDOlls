@@ -2,6 +2,7 @@ from django.urls import path
 from django.conf.urls.static import static
 
 from my_music import settings
+from webapp import views
 from webapp.views import *
 
 app_name = 'webapp'
@@ -18,6 +19,7 @@ urlpatterns = [
     path('accounts/logout/', CRLogoutView.as_view(), name='logout'),
     path('register/', RegisterUserView.as_view(), name='register'),
     path('accounts/regitster/done/', RegisterDoneView.as_view(), name='register_done'),
+    path('subscribe/', views.subscribe, name='subscribe'),
 
 ]
 

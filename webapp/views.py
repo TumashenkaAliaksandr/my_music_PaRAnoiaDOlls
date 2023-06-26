@@ -7,6 +7,8 @@ from django.core.paginator import Paginator
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, CreateView
 from webapp.forms import RegisterUserForm
+from .forms import SubscriptionForm
+
 
 
 def index(request):
@@ -115,3 +117,14 @@ class RegisterUserView(CreateView):
 class RegisterDoneView(TemplateView):
     """Confirmation of registration"""
     template_name = 'webapp/register_done.html'
+
+
+def subscribe(request):
+    if request.method == 'POST':
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'webapp/success.html')
+    else:
+        form = SubscriptionForm()
+    return render(request, 'webapp/subscribe.html', {'form': form})

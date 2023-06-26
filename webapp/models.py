@@ -136,3 +136,13 @@ class Trinkets(Merchandise):
     class Meta:
         verbose_name = "Разное"
         verbose_name_plural = "Разное"
+
+
+
+class Subscription(models.Model):
+    username = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.email
+
