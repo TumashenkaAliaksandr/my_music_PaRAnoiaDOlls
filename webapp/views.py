@@ -2,13 +2,16 @@ from webapp.models import Song, Concert, News, Merchandise, TShirt, Cap
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render
 from django.core.paginator import Paginator
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import TemplateView, ListView, CreateView
 from webapp.forms import RegisterUserForm
 from .forms import SubscriptionForm
-
+from django.shortcuts import render, redirect
+from django.utils.crypto import get_random_string
+from .models import Subscription
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def index(request):
@@ -119,12 +122,42 @@ class RegisterDoneView(TemplateView):
     template_name = 'webapp/register_done.html'
 
 
+# def subscribe(request):
+#     if request.method == 'POST':
+#         form = SubscriptionForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return render(request, 'webapp/success.html')
+#     else:
+#         form = SubscriptionForm()
+#     return render(request, 'webapp/subscribe.html', {'form': form})
+
 def subscribe(request):
     if request.method == 'POST':
         form = SubscriptionForm(request.POST)
         if form.is_valid():
-            form.save()
-            return render(request, 'webapp/success.html')
+            email = form.cleaned_data['email']
+            if Subscription.objects.filter(email=email).exists():
+                return render(request, 'webapp/already_subscribed.html')
+            else:
+                confirmation_code = get_random_string(length=32)  # Генерация уникального кода подтверждения
+                subscription = Subscription(email=email, confirmation_code=confirmation_code)
+                subscription.save()
+
+                # Генерация ссылки подтверждения
+                confirmation_url = request.build_absolute_uri(
+                    reverse('webapp:confirm_subscription', kwargs={'confirmation_code': confirmation_code}))
+
+                # Отправка письма
+                subject = 'Подтверждение подписки'
+                message = f'Для подтверждения подписки, перейдите по ссылке: {confirmation_url}'
+                from_email = settings.EMAIL_HOST_USER
+                recipient_list = [email]
+
+                send_mail(subject, message, from_email, recipient_list)
+
+                return render(request, 'webapp/success.html')
     else:
         form = SubscriptionForm()
     return render(request, 'webapp/subscribe.html', {'form': form})
+

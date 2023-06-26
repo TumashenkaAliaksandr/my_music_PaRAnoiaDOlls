@@ -133,13 +133,11 @@
                         Никакого спама, только рок-н-ролл!</p>
                 </div>
                 <div class="newsletter-form">
-                    <form method="post" action="{% url 'webapp:subscribe' %}">
+                    <form method="post" action="{% url 'webapp:succes' %}">
                         {% csrf_token %}
                         <input type="email" name="email" placeholder="Введите ваш email" required>
-                        <a href="{% url 'webapp:subscribe' %}" class="btn btn-orange">Подписаться</a>
+                        <a href="{% url 'webapp:succes' %}" class="btn btn-orange">Подписаться</a>
                     </form>
-
-
                 </div>
             </div>
         </div>

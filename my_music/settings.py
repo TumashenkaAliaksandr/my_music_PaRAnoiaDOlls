@@ -135,3 +135,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Используем SMTP-бэкэнд для отправки писем
+EMAIL_HOST = 'your_email_host'  # Хост SMTP-сервера
+EMAIL_PORT = 587  # Порт SMTP-сервера
+EMAIL_HOST_USER = 'your_email@example.com'  # Адрес электронной почты отправителя
+EMAIL_HOST_PASSWORD = 'your_email_password'  # Пароль от электронной почты отправителя
+EMAIL_USE_TLS = True  # Использование TLS-шифрования для SMTP-соединения
+
+LOGIN_REDIRECT_URL = '/'

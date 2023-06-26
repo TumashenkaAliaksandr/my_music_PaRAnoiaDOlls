@@ -6060,3 +6060,27 @@ section.events .meta span {
     display: flex;
     align-items: center;
 }
+
+.success-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.success-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.success-text {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.success-email {
+    font-size: 16px;
+    color: #999;
+    margin-top: 10px;
+}
+
