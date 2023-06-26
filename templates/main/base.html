@@ -136,8 +136,10 @@
                     <form method="post" action="{% url 'webapp:subscribe' %}">
                         {% csrf_token %}
                         <input type="email" name="email" placeholder="Введите ваш email" required>
-                        <button type="submit" class="btn btn-orange">Подписаться</button>
+                        <a href="{% url 'webapp:subscribe' %}" class="btn btn-orange">Подписаться</a>
                     </form>
+
+
                 </div>
             </div>
         </div>
