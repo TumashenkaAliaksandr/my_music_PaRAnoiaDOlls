@@ -22,6 +22,7 @@ urlpatterns = [
     path('register/', RegisterUserView.as_view(), name='register'),
     path('accounts/regitster/done/', RegisterDoneView.as_view(), name='register_done'),
     path('succes/', views.subscribe, name='succes'),
+    path('subscribe/', subscribe, name='subscribe'),
 
 ]
 

@@ -6084,3 +6084,7 @@ section.events .meta span {
     margin-top: 10px;
 }
 
+.gothic-font {
+    font-family: 'Gothic', monospace;
+    text-align: center;
+}

@@ -7,19 +7,12 @@
 {% block content %}
     <div class="site-section" style="overflow: hidden">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <h3 class="text-primary" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">
-                        <span style="color: #333;">Вы вышли с аккаунта.</span>
-                    </h3>
-                </div>
-            </div>
+            <h3 class="gothic-font" style="text-align: center">Вы вышли из аккаунта!</h3>
             <script>
                 setTimeout(function () {
                     window.location.href = "{% url 'webapp:home' %}";
-                }, 2500);  // Через 2.5 секунды произойдет перенаправление на главную страницу
+                }, 3000);  // Через 3 секунды произойдет перенаправление на главную страницу
             </script>
         </div>
     </div>
 {% endblock %}
-
