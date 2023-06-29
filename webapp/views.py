@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.core.paginator import Paginator
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, CreateView
+from django.views.generic import TemplateView, ListView, CreateView, FormView
 from webapp.forms import RegisterUserForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 
@@ -106,13 +106,15 @@ class CRLogoutView(LoginRequiredMixin, LogoutView):
     next_page = reverse_lazy('webapp:home')
 
 
-class RegisterUserView(CreateView):
+class RegisterUserView(FormView):
     """Registration"""
-    model = User
     template_name = 'webapp/register_user.html'
     form_class = RegisterUserForm
     success_url = reverse_lazy('webapp:register_done')
 
+    def form_valid(self, form):
+        form.save()  # Сохраняем пользователя
+        return super().form_valid(form)
 
 class RegisterDoneView(TemplateView):
     """Confirmation of registration"""
@@ -139,14 +141,18 @@ def subscribe(request):
         else:
             return render(request, 'webapp/error.html')
     else:
+        if request.user.is_authenticated:
+            return redirect('admin:index')
         return render(request, 'webapp/subscribe.html')
+
 
 
 def send_email(email):
     subject = 'Subscription Confirmation'
     message = 'Welcome to our newsletter!'
-    from_email = 'your_email@example.com'
+    from_email = 'Badminton500@inbox.lv'
     recipient_list = [email]
 
     send_mail(subject, message, from_email, recipient_list)
+
 

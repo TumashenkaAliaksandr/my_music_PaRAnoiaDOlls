@@ -137,11 +137,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Используем SMTP-бэкэнд для отправки писем
-EMAIL_HOST = 'your_email_host'  # Хост SMTP-сервера
-EMAIL_PORT = 587  # Порт SMTP-сервера
-EMAIL_HOST_USER = 'your_email@example.com'  # Адрес электронной почты отправителя
-EMAIL_HOST_PASSWORD = 'your_email_password'  # Пароль от электронной почты отправителя
-EMAIL_USE_TLS = True  # Использование TLS-шифрования для SMTP-соединения
+# settings.py
 
-LOGIN_REDIRECT_URL = '/'
+# Настройки для отправки электронной почты
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.@gmail.com'  # Укажите адрес вашего SMTP-сервера
+EMAIL_PORT = 587  # Укажите порт SMTP-сервера (обычно 587 или 25)
+EMAIL_USE_TLS = True  # Использовать ли TLS (рекомендуется)
+EMAIL_HOST_USER = 'tumashenkaaliaksandr@gmail.com'  # Укажите вашу электронную почту для авторизации на SMTP-сервере
+EMAIL_HOST_PASSWORD = 'your_password'  # Укажите пароль от вашей электронной почты
+
+# Дополнительные настройки SMTP-сервера (если требуется)
+EMAIL_USE_SSL = False  # Использовать ли SSL
+EMAIL_TIMEOUT = None  # Таймаут для подключения к SMTP-серверу (по умолчанию None)
+DEFAULT_FROM_EMAIL = 'Badminton500@inbox.lv'  # Электронная почта, от имени которой будет отправляться почта
+

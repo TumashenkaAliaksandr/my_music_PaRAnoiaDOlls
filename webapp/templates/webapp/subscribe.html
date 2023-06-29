@@ -2,17 +2,12 @@
 
 {% block content %}
     <h1>Подписка на рассылку</h1>
-    {% if form.errors %}
-        <p class="error">Ошибка в заполнении формы. Пожалуйста, проверьте введенные данные.</p>
-    {% endif %}
-    {% if subscribed %}
-        <p>Вы уже подписаны на рассылку.</p>
-    {% else %}
-        <p>Введите ваш адрес электронной почты, чтобы подписаться на нашу рассылку.</p>
+    <div class="newsletter-form">
         <form method="post" action="{% url 'webapp:subscribe' %}">
             {% csrf_token %}
-            {{ form.email }}
-            <button type="submit" class="btn btn-orange btn-subscribe">Подписаться</button>
+            <input type="email" name="email" placeholder="Введите ваш email" required>
+            <button type="submit" class="btn btn-orange">Подписаться</button>
         </form>
-    {% endif %}
+    </div>
+
 {% endblock %}

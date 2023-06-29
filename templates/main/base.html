@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 {% block head %}
 <head>
@@ -133,10 +133,10 @@
                         Никакого спама, только рок-н-ролл!</p>
                 </div>
                 <div class="newsletter-form">
-                    <form method="post" action="{% url 'webapp:succes' %}">
+                    <form method="post" action="{% url 'webapp:subscribe' %}">
                         {% csrf_token %}
                         <input type="email" name="email" placeholder="Введите ваш email" required>
-                        <a href="{% url 'webapp:succes' %}" class="btn btn-orange">Подписаться</a>
+                        <a href="{% url 'webapp:subscribe' %}" class="btn btn-orange">Подписаться</a>
                     </form>
                 </div>
             </div>
@@ -172,7 +172,8 @@
                                 <ul>
                                     <li><img src="{% static 'webapp/images/icons/visa.png' %}" alt="image"></li>
                                     <li><img src="{% static 'webapp/images/icons/mastercard.png' %}" alt="image"></li>
-                                    <li><img src="{% static 'webapp/images/icons/americanexpress.png' %}" alt="image"></li>
+                                    <li><img src="{% static 'webapp/images/icons/americanexpress.png' %}" alt="image">
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -185,7 +186,9 @@
                                         paranoiadolls@gmail.com</a></li>
                                     <li><a href="tel:+375336111777"><i class="fa fa-phone" aria-hidden="true"></i>
                                         +375336111777</a></li>
-                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: 1-ый переулок Космонавтов</li>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Адрес: 1-ый переулок
+                                        Космонавтов
+                                    </li>
                                     <li>Ракета: N13</li>
                                 </ul>
                             </div>
@@ -197,7 +200,8 @@
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-content text-center">
-                    <p class="white">Copyright 2023. Made with <span><a href="https://t.me/ultravioletpartyeyes">Phoenix Pegasus</a></span>. All Rights Reserved. <a href="#">PaRAnoiaDOlls</a></p>
+                    <p class="white">Copyright 2023. Made with <span><a href="https://t.me/ultravioletpartyeyes">Phoenix Pegasus</a></span>.
+                        All Rights Reserved. <a href="#">PaRAnoiaDOlls</a></p>
                     <ul>
                         <li><a href="#" class="white"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
