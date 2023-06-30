@@ -16,14 +16,6 @@
                     {% csrf_token %}
                     {% bootstrap_form form layout='centre' %}
                     <input type="hidden" name="next">
-                    <div class="form-group">
-                        <label for="id_password1">Пароль:</label>
-                        <input type="password" name="password1" class="form-control" id="id_password1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_password2">Подтверждение пароля:</label>
-                        <input type="password" name="password2" class="form-control" id="id_password2" required>
-                    </div>
                     <div class="form-group form-checkbox">
                         <input type="checkbox"> Запомнить меня
                         <a href="#">Забыли пароль?</a>
@@ -35,7 +27,5 @@
             {% endif %}
         </div>
     </div>
-
-
 
 {% endblock %}

@@ -1,14 +1,14 @@
 from webapp.models import Song, Concert, News, Merchandise, TShirt, Cap
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.core.paginator import Paginator
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, CreateView, FormView
-from webapp.forms import RegisterUserForm
+from django.views.generic import TemplateView, ListView, FormView
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.forms import UserCreationForm
+
 
 
 def index(request):
@@ -109,12 +109,13 @@ class CRLogoutView(LoginRequiredMixin, LogoutView):
 class RegisterUserView(FormView):
     """Registration"""
     template_name = 'webapp/register_user.html'
-    form_class = RegisterUserForm
+    form_class = UserCreationForm
     success_url = reverse_lazy('webapp:register_done')
 
     def form_valid(self, form):
-        form.save()  # Сохраняем пользователя
+        form.save()
         return super().form_valid(form)
+
 
 class RegisterDoneView(TemplateView):
     """Confirmation of registration"""
