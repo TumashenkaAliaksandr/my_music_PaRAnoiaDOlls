@@ -14,20 +14,26 @@
             {% else %}
                 <form method="post">
                     {% csrf_token %}
-                    {% bootstrap_form form layout='centre' %}
+                    <div class="form-group">
+                        <label for="{{ form.username.id_for_label }}">Имя:</label>
+                        {{ form.username }}
+                    </div>
 
                     <div class="form-group">
-                        <label for="{{ form.password1.id_for_label }}">Пароль:
-                            <a href="#" data-toggle="tooltip" data-placement="right" title="Пароль не должен быть слишком похож на другую вашу личную информацию. Ваш пароль должен содержать как минимум 8 символов. Пароль не должен быть слишком простым и распространенным. Пароль не может состоять только из цифр.">
-                                <i class="fas fa-question-circle"></i>
-                            </a>
-                        </label>
-                        {{ form.password }}
+                        <label for="{{ form.password1.id_for_label }}">Пароль:</label>
+                        {{ form.password1 }}
                     </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.password2.id_for_label }}">Подтверждение пароля:</label>
+                        {{ form.password2 }}
+                    </div>
+
                     <div class="form-group form-checkbox">
                         <input type="checkbox"> Запомнить меня
                         <a href="#">Забыли пароль?</a>
                     </div>
+
                     {% buttons %}
                         <button type="submit" class="btn btn-warning text-light btn-block">Регистрация</button>
                     {% endbuttons %}
@@ -35,11 +41,5 @@
             {% endif %}
         </div>
     </div>
-
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
 
 {% endblock %}
