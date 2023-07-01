@@ -8,8 +8,6 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
 
 
 
@@ -112,22 +110,17 @@ class RegisterUserView(FormView):
     """Registration"""
     template_name = 'webapp/register_user.html'
     form_class = UserCreationForm
-    success_url = reverse_lazy('webapp:home')  # Замените 'account' на URL вашей страницы учетной записи
+    success_url = reverse_lazy('webapp:login')
 
     def form_valid(self, form):
-        response = super().form_valid(form)
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password1')
-        user = authenticate(self.request, username=username, password=password)
-        if user is not None:
-            login(self.request, user)
-            messages.success(self.request, 'Вы успешно зарегистрировались и вошли в аккаунт.')
-        return response
+        form.save()
+        return super().form_valid(form)
+
 
 
 class RegisterDoneView(TemplateView):
     """Confirmation of registration"""
-    template_name = 'webapp/register_done.html'
+    template_name = 'webapp/login.html'
 
 
 # def subscribe(request):

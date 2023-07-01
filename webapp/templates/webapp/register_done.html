@@ -5,24 +5,25 @@
 {% block title %}Registration completed{% endblock %}
 
 {% block content %}
-    <div class="ftco-blocks-cover-1" style="height: 200px; overflow: hidden">
-        <div class="ftco-cover-1 overlay innerpage"
-             style="background-image: url('{% static 'webapp/images/pd_logo.png' %}')">
 
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h1>Enter</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="site-section" style="overflow: hidden">
+        <div class="container" style="max-width: 600px; margin: 0 auto; padding: 30px;">
+            <h4 class="text-center">Привет! Заполни форму что бы войти.</h4>
+            {% if user.is_authenticated %}
+                <p>You are already signed in.</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next">
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox"> Remember Me
+                        <a href="#">Forgot password?</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="site-section" style="overflow: hidden">
-        <div class="container">
-            <h2>Registration</h2>
-            <p>User registration completed.</p>
+                    {% buttons %}
+                        <button type="submit" class="btn btn-warning text-light btn-block">Sign in</button>
+                    {% endbuttons %}
+                </form>
+            {% endif %}
         </div>
     </div>
 
