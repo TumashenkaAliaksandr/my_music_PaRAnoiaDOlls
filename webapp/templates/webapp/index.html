@@ -293,7 +293,10 @@
                                         <div class="room-item">
                                             <div class="room-image">
                                                 <img src="{{ main_merch.image.url }}">
-                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="like-button" data-merch-id="{{ main_merch.id }}">
+                                                    <i class="fa fa-heart {% if main_merch.is_liked %}liked{% endif %}"></i>
+                                                </a>
+                                                <span class="likes-count">{{ main_merch.likes }}</span>
                                             </div>
                                             <div class="room-content">
                                                 <div class="room-title">
@@ -321,6 +324,39 @@
                 </div>
             </div>
         </section>
+
+<script>
+    // JavaScript для обработки лайков
+    document.addEventListener("DOMContentLoaded", function () {
+        const likeButtons = document.querySelectorAll(".like-button");
+        const csrfToken = document.querySelector("[name=csrfmiddlewaretoken]").value; // Получение CSRF-токена из скрытого поля формы
+        likeButtons.forEach((button) => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+                const merchId = this.getAttribute("data-merch-id");
+                // Отправка AJAX-запроса для обработки лайков
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "/like/", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.setRequestHeader("X-CSRFToken", csrfToken); // Установка заголовка X-CSRFToken
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                        // Обновление количества лайков и состояния кнопки
+                        const response = JSON.parse(xhr.responseText);
+                        const likesCountElement = document.querySelector(`[data-merch-id="${merchId}"] .likes-count`);
+                        likesCountElement.textContent = response.likes;
+                        button.classList.toggle("liked");
+                    }
+                };
+                xhr.send(JSON.stringify({merchId: merchId}));
+            });
+        });
+    });
+
+</script>
+
+
+
     <!-- Room Ends -->
 
 

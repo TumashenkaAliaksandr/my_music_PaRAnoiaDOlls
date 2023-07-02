@@ -35,6 +35,11 @@ class TrinketsAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'price', 'quantity', 'type')
 
 
+
+class SubscriberAdmin(admin.ModelAdmin):
+    list_display = ['email', 'date_subscribed']
+
+
 admin.site.register(Merchandise, MerchandiseAdmin)
 admin.site.register(TShirt, TShirtAdmin)
 admin.site.register(Cap, CapAdmin)
@@ -42,3 +47,4 @@ admin.site.register(Sweatshirt, SweatshirtAdmin)
 admin.site.register(MerchandiseCategory)
 admin.site.register(Trinkets, TrinketsAdmin)
 admin.site.register(Concert, ConcertAdmin)
+admin.site.register(Subscriber)

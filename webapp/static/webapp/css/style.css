@@ -5450,6 +5450,13 @@ button.btn-blue:hover{
   background: #ffa801;
 }
 
+.btn-warning {
+    color: #fff;
+    background-color: #ffa801;
+    border-color: #ffcf8c;
+    border-radius: 0;
+    margin: 0 auto;
+}
 
 .sidebar-box{
   margin-bottom: 40px;

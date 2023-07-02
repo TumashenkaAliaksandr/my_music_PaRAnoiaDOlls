@@ -1,6 +1,7 @@
 from datetime import datetime
-
+from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 
 
 class Song(models.Model):
@@ -52,6 +53,9 @@ class News(models.Model):
         verbose_name = "Новости"
         verbose_name_plural = "Новости"
 
+    def get_absolute_url(self):
+        return reverse('news-datail', kwargs={'pk': self.id})
+
 
 class Merchandise(models.Model):
     """Merch model"""
@@ -63,6 +67,7 @@ class Merchandise(models.Model):
     color = models.CharField(max_length=20, verbose_name='Цвет')
     quantity = models.IntegerField(verbose_name='Количество')
     is_main = models.BooleanField(default=False)
+    likes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -145,4 +150,8 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Subscriber(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 

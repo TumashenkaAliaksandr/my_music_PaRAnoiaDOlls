@@ -21,7 +21,9 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='webapp/logout.html'), name='logout'),
     path('register/', RegisterUserView.as_view(), name='register'),
     path('accounts/regitster/done/', RegisterDoneView.as_view(), name='register_done'),
-    path('subscribe/', subscribe, name='subscribe'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('merch/<int:merch_id>/like/', like_merch, name='like_merch'),
+
 
 ]
 

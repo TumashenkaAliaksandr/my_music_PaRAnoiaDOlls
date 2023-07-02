@@ -1,13 +1,15 @@
-from webapp.models import Song, Concert, News, Merchandise, TShirt, Cap
+from webapp.models import Song, Concert, News, Merchandise, TShirt, Cap, Subscriber
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.core.paginator import Paginator
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import TemplateView, ListView, FormView
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import get_object_or_404, redirect
+from django.http import JsonResponse
 
 
 
@@ -136,17 +138,10 @@ class RegisterDoneView(TemplateView):
 @csrf_exempt
 def subscribe(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        if email:
-            send_email(email)
-            return render(request, 'webapp/success.html')
-        else:
-            return render(request, 'webapp/error.html')
-    else:
-        if request.user.is_authenticated:
-            return redirect('admin:index')
-        return render(request, 'webapp/subscribe.html')
-
+        sub = Subscriber.objects.filter(user=request.user).first()
+        if not sub:
+            Subscriber.objects.create(user=request.user)
+    return redirect('webapp:eventsdat')
 
 
 def send_email(email):
@@ -158,3 +153,12 @@ def send_email(email):
     send_mail(subject, message, from_email, recipient_list)
 
 
+def like_merch(request, merch_id):
+    merch = get_object_or_404(Merchandise, id=merch_id)
+    merch.likes += 1
+    merch.save()
+
+    data = {
+        'likes': merch.likes
+    }
+    return JsonResponse(data)

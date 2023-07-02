@@ -1,0 +1,9 @@
+<!-- merch_detail.html -->
+<div class="room-image">
+    <img src="{{ merch.image.url }}">
+    <form action="{% url 'like_merch' merch_id=merch.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="like-button"><i class="fa fa-heart {% if merch.likes > 0 %}liked{% endif %}"></i></button>
+    </form>
+    <p class="like-count">{{ merch.likes }}</p>
+</div>
