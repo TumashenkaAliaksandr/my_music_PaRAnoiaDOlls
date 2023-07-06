@@ -23,9 +23,9 @@ urlpatterns = [
     path('accounts/regitster/done/', RegisterDoneView.as_view(), name='register_done'),
     path('subscribe/', views.subscribe, name='subscribe'),
     path('merch/<int:merch_id>/like/', like_merch, name='like_merch'),
-
-
+    path('product/<int:product_id>/', views.product_detail, name='product_detail'),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

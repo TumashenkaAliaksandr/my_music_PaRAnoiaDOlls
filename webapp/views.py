@@ -162,3 +162,8 @@ def like_merch(request, merch_id):
         'likes': merch.likes
     }
     return JsonResponse(data)
+
+
+def product_detail(request, product_id):
+    product = get_object_or_404(Merchandise, id=product_id)
+    return render(request, 'webapp/product_detail.html', {'product': product})
